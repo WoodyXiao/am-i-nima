@@ -1,0 +1,1717 @@
+.pageShell {
+  --section-padding: clamp(1.125rem, 4vw, 6rem);
+  position: relative;
+  overflow: hidden;
+  background: #050706;
+}
+
+.siteHeader {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 20;
+  height: 13.875rem;
+  pointer-events: none;
+}
+
+.headerGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 100%);
+  pointer-events: none;
+}
+
+.headerInner {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 2.25rem;
+}
+
+.headerLogoLink,
+.wishlistLink {
+  pointer-events: auto;
+}
+
+.headerLogoLink {
+  display: inline-flex;
+  width: 6.5rem;
+  height: 4.1875rem;
+  opacity: .6;
+  transition: opacity .2s ease;
+}
+
+.headerLogoLink:hover,
+.headerLogoLink:focus-visible {
+  opacity: 1;
+}
+
+.headerLogo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.wishlistLink {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  padding: .25rem .5rem;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+  opacity: .6;
+  transition: opacity .2s ease, color .2s ease;
+}
+
+.wishlistLink:hover,
+.wishlistLink:focus-visible {
+  color: var(--green);
+  opacity: 1;
+}
+
+.disabledLink,
+.disabledCta {
+  cursor: default;
+}
+
+.disabledLink:hover {
+  color: inherit;
+  opacity: .6;
+}
+
+.videoViewport {
+  position: relative;
+  width: 100%;
+  height: min(56.25vw, 810px);
+  min-height: 28rem;
+  overflow: hidden;
+  background: #020504;
+}
+
+.videoMedia,
+.videoFallback {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.videoMedia iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.videoFallbackImage {
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(.8) brightness(.92);
+}
+
+.videoFallbackShade {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 52% 58%, rgba(0, 71, 52, .05), rgba(0, 0, 0, .45) 78%), linear-gradient(to bottom, rgba(0, 0, 0, .08), rgba(0, 0, 0, .24));
+}
+
+.videoFallbackLabel {
+  position: absolute;
+  right: clamp(1.5rem, 5vw, 5rem);
+  bottom: clamp(1rem, 5vw, 4rem);
+  margin: 0;
+  color: rgba(229, 231, 230, .62);
+  font-size: .75rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.introduction {
+  position: relative;
+  min-height: 39rem;
+  margin-top: -9rem;
+  isolation: isolate;
+}
+
+.introduction::before,
+.introduction::after {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  width: 100%;
+  height: 13.875rem;
+  content: "";
+  pointer-events: none;
+}
+
+.introduction::before {
+  top: 0;
+  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.introduction::after {
+  bottom: 0;
+  background: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.introductionArt {
+  position: absolute;
+  z-index: -2;
+  inset: 2rem -14vw 0;
+  overflow: hidden;
+  opacity: .7;
+}
+
+.introductionArtImage {
+  object-fit: cover;
+  object-position: center 41%;
+}
+
+.introductionCopy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(100% - 2rem, 32rem);
+  margin: 0 auto;
+  padding-top: 4rem;
+  text-align: center;
+}
+
+.gameLogo {
+  width: min(26.5rem, 82vw);
+  height: auto;
+  object-fit: contain;
+}
+
+.introText {
+  width: min(29.5rem, 100%);
+  margin-top: -1.5rem;
+  color: var(--paper);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.introText p {
+  margin: 0;
+}
+
+.introText p + p {
+  margin-top: 1.5rem;
+}
+
+.introCtas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 3.5rem;
+}
+
+.steamButton {
+  position: relative;
+  display: inline-flex;
+  min-height: 4.5rem;
+  align-items: center;
+  justify-content: center;
+  gap: .55rem;
+  padding: .9rem 1.5rem;
+  color: var(--paper);
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color .2s ease, transform .2s ease;
+}
+
+.steamButtonBorder {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+}
+
+.steamButton:hover,
+.steamButton:focus-visible {
+  color: var(--green);
+  transform: translateY(-2px);
+}
+
+.steamButton:active {
+  transform: translateY(0);
+}
+
+.disabledCta {
+  color: rgba(229, 231, 230, .8);
+}
+
+.disabledCta:hover {
+  color: rgba(229, 231, 230, .8);
+  transform: none;
+}
+
+.steamIcon {
+  position: relative;
+  z-index: 1;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: .25rem;
+  object-fit: cover;
+}
+
+.steamButton > span:not(.steamButtonBorder) {
+  position: relative;
+  z-index: 1;
+}
+
+.gallerySection {
+  position: relative;
+  z-index: 1;
+  padding: 4rem 0 7rem;
+  background: #050706;
+}
+
+.galleryCarousel {
+  width: 100%;
+}
+
+.galleryStage {
+  position: relative;
+  display: flex;
+  width: min(100%, 90rem);
+  min-height: 38rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 2.5rem 4.5rem;
+}
+
+.galleryMainFrame {
+  position: relative;
+  z-index: 2;
+  width: min(72.4vw, 65.2rem);
+  aspect-ratio: 1.777 / 1;
+  border: .1875rem solid #fff;
+  box-shadow: 0 .625rem 0 #fff;
+  overflow: hidden;
+  background: #020303;
+}
+
+.galleryImage {
+  object-fit: cover;
+}
+
+@keyframes gallerySlideIn {
+  from {
+    opacity: .55;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.galleryMainFrame {
+  animation: gallerySlideIn .4s ease-out both;
+}
+
+.mirrorFrame {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  width: 13.75rem;
+  height: 38.1875rem;
+  overflow: hidden;
+  border-top: .15rem solid #fff;
+  border-bottom: .15rem solid #fff;
+  box-shadow: 0 .625rem 0 #fff;
+  transform: translateY(-50%);
+}
+
+.mirrorLeft {
+  left: 6.8%;
+  border-right: .15rem solid #fff;
+}
+
+.mirrorRight {
+  right: 6.8%;
+  border-left: .15rem solid #fff;
+}
+
+.mirrorImageLeft,
+.mirrorImageRight {
+  width: 474%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mirrorImageLeft {
+  left: -374%;
+}
+
+.mirrorImageRight {
+  left: 0;
+}
+
+.previewShade {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 75px;
+  height: 611px;
+  pointer-events: none;
+  background: linear-gradient(270deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.previewShadeLeft {
+  left: 0;
+  transform: rotate(-180deg);
+}
+
+.previewShadeRight {
+  right: 0;
+}
+
+.galleryArrow {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.galleryArrow:hover,
+.galleryArrow:focus-visible {
+  filter: drop-shadow(0 0 .4rem var(--green));
+}
+
+.galleryArrowLeft {
+  left: 7.5%;
+}
+
+.galleryArrowRight {
+  right: 7.5%;
+}
+
+.galleryArrowIcon {
+  object-fit: contain;
+}
+
+.galleryArrowIconRight {
+  transform: scaleX(-1);
+}
+
+.galleryThumbnails {
+  display: flex;
+  justify-content: center;
+  gap: .75rem;
+  max-width: calc(100% - 2rem);
+  margin: 2rem auto 0;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.thumbnail {
+  position: relative;
+  flex: 0 0 6.6rem;
+  width: 6.6rem;
+  height: 3.75rem;
+  padding: 0;
+  border: .1rem solid #fff;
+  background: transparent;
+  opacity: .5;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.thumbnailActive {
+  opacity: 1;
+}
+
+.thumbnail img {
+  object-fit: cover;
+}
+
+.studioSection {
+  position: relative;
+  min-height: 21rem;
+  overflow: hidden;
+  background: #050706;
+}
+
+.studioBackdrop {
+  position: absolute;
+  inset: 0;
+  opacity: .8;
+}
+
+.studioBackdropImage {
+  object-fit: cover;
+  object-position: center 51%;
+}
+
+.studioBackdropShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, .52), rgba(0, 0, 0, .58));
+}
+
+.studioContent {
+  position: relative;
+  display: grid;
+  width: min(100% - 2rem, 68rem);
+  grid-template-columns: minmax(12rem, 1fr) minmax(16rem, 1.15fr);
+  align-items: center;
+  gap: 3rem;
+  min-height: 21rem;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.studioLogo {
+  width: min(21.8rem, 100%);
+  height: auto;
+  justify-self: center;
+  object-fit: contain;
+}
+
+.studioCopy {
+  width: min(22.5rem, 100%);
+}
+
+.studioCopy h2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.studioCopy p {
+  margin: 0;
+  color: var(--paper);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.contactSection {
+  display: grid;
+  width: min(100% - 2rem, 68rem);
+  grid-template-columns: minmax(14rem, 1fr) minmax(26rem, 1.3fr);
+  align-items: center;
+  gap: 3rem;
+  margin: 0 auto;
+  padding: 7rem 0 5rem;
+}
+
+.awards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.indiecadeBadge {
+  width: min(13.4rem, 38%);
+  height: auto;
+}
+
+.wingsBadge {
+  width: min(20.6rem, 58%);
+  height: auto;
+}
+
+.contactContent {
+  min-width: 0;
+}
+
+.contactPrompt,
+.socialPrompt {
+  margin: 0;
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.emailLink {
+  display: inline-block;
+  margin: .25rem 0 2.5rem;
+  color: var(--paper);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(1.5rem, 3.3vw, 2.5rem);
+  font-weight: 700;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.emailLink:hover,
+.emailLink:focus-visible {
+  color: var(--green);
+}
+
+  .socialLinks {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-areas:
+      "steam discord x bluesky"
+      "instagram tumblr tiktok youtube";
+    gap: .35rem 2rem;
+    margin-top: .5rem;
+  }
+
+  .socialLink:nth-child(1) { grid-area: steam; }
+  .socialLink:nth-child(2) { grid-area: discord; }
+  .socialLink:nth-child(3) { grid-area: youtube; }
+  .socialLink:nth-child(4) { grid-area: instagram; }
+  .socialLink:nth-child(5) { grid-area: tumblr; }
+  .socialLink:nth-child(6) { grid-area: x; }
+  .socialLink:nth-child(7) { grid-area: bluesky; }
+  .socialLink:nth-child(8) { grid-area: tiktok; }
+
+.socialLink {
+  display: inline-flex;
+  min-height: 2.25rem;
+  align-items: center;
+  color: var(--muted);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.socialLink:hover,
+.socialLink:focus-visible {
+  color: #fff;
+}
+
+.siteFooter {
+  padding: 0 1rem 3rem;
+  color: var(--paper);
+  font-size: .9375rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (min-width: 37.5rem) {
+  .introduction {
+    min-height: 37rem;
+    margin-top: -12rem;
+  }
+
+  .introductionCopy {
+    width: min(100% - 4rem, 31rem);
+    padding-top: 3.5rem;
+  }
+
+  .introText {
+    margin-top: -2rem;
+  }
+
+  .introCtas {
+    gap: 2.25rem;
+    margin-top: 3rem;
+  }
+
+  .steamButton {
+    font-size: 1.665rem;
+  }
+
+  .gallerySection {
+    padding-top: 1rem;
+  }
+
+  .galleryStage {
+    min-height: auto;
+    padding: 2rem 1rem 0;
+  }
+
+  .galleryMainFrame {
+    width: min(100%, 44.4rem);
+    box-shadow: 0 .45rem 0 #fff;
+  }
+
+  .mirrorFrame,
+  .galleryArrow {
+    display: none;
+  }
+
+  .galleryThumbnails {
+    margin-top: 1.25rem;
+  }
+
+  .studioSection {
+    min-height: 18rem;
+  }
+
+  .studioContent {
+    width: min(100% - 2rem, 43.5rem);
+    min-height: 18rem;
+    gap: 2rem;
+    padding: 3rem 0;
+  }
+
+  .studioLogo {
+    width: min(11.8rem, 100%);
+  }
+
+  .studioCopy {
+    width: min(22.5rem, 100%);
+  }
+
+  .studioCopy p {
+    font-size: 1.125rem;
+  }
+
+  .contactSection {
+    width: min(100% - 2rem, 43.5rem);
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding-top: 4rem;
+  }
+
+  .awards {
+    justify-content: flex-start;
+  }
+
+  .socialLinks {
+    max-width: 42rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .headerInner {
+    justify-content: flex-end;
+    padding: 2rem 1rem;
+  }
+
+  .headerLogoLink {
+    display: none;
+  }
+
+  .wishlistLink {
+    min-height: 2rem;
+    padding: .1rem 0;
+    font-size: .875rem;
+  }
+
+  .videoViewport {
+    height: 38.0625rem;
+    min-height: 0;
+  }
+
+  .videoFallback,
+  .videoMedia {
+    left: 50%;
+    width: 67.625rem;
+    height: 38.0625rem;
+    transform: translateX(-50%);
+  }
+
+  .videoFallbackLabel {
+    right: 17rem;
+    white-space: nowrap;
+  }
+
+  .introduction {
+    min-height: 32rem;
+    margin-top: -7.5rem;
+  }
+
+  .introductionArt {
+    inset: 0 -120vw -3rem;
+  }
+
+  .introductionCopy {
+    width: calc(100% - 4rem);
+    padding-top: 2rem;
+  }
+
+  .gameLogo {
+    width: min(19.625rem, 100%);
+  }
+
+  .introText {
+    width: 100%;
+    margin-top: -.75rem;
+    font-size: 1.0625rem;
+  }
+
+  .introText p + p {
+    margin-top: 1.25rem;
+  }
+
+  .introCtas {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+    margin-top: 2.5rem;
+  }
+
+  .steamButton {
+    min-height: 3.7rem;
+    padding: .75rem 1.1rem;
+    font-size: 1.335rem;
+  }
+
+  .steamIcon {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .gallerySection {
+    padding: 1rem 0 5.5rem;
+  }
+
+  .galleryStage {
+    min-height: 0;
+    padding: 1rem 1.125rem 0;
+  }
+
+  .galleryMainFrame {
+    width: 100%;
+    border-width: .0625rem;
+    box-shadow: none;
+  }
+
+  .galleryThumbnails {
+    justify-content: flex-start;
+    gap: .7rem;
+    max-width: calc(100% - 2.25rem);
+    margin-top: 1rem;
+  }
+
+  .thumbnail {
+    flex-basis: 3.4rem;
+    width: 3.4rem;
+    height: 1.92rem;
+    border-width: .0625rem;
+  }
+
+  .studioSection {
+    min-height: 12.2rem;
+  }
+
+  .studioBackdrop {
+    opacity: .55;
+  }
+
+  .studioContent {
+    width: calc(100% - 4rem);
+    grid-template-columns: 1fr 1fr;
+    gap: 1.1rem;
+    min-height: 12.2rem;
+    padding: 1.5rem 0;
+  }
+
+  .studioLogo {
+    width: 100%;
+  }
+
+  .studioCopy {
+    width: 100%;
+  }
+
+  .studioCopy p {
+    font-size: .9375rem;
+    line-height: 1.6;
+  }
+
+  .contactSection {
+    display: flex;
+    width: calc(100% - 4rem);
+    flex-direction: column;
+    gap: 3rem;
+    align-items: stretch;
+    padding: 4rem 0 3rem;
+  }
+
+  .awards {
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .indiecadeBadge {
+    width: 31%;
+  }
+
+  .wingsBadge {
+    width: 58%;
+  }
+
+  .contactPrompt,
+  .socialPrompt {
+    font-size: 1.25rem;
+  }
+
+  .emailLink {
+    display: flex;
+    min-height: 2.7rem;
+    align-items: center;
+    justify-content: center;
+    margin: .75rem 0 3rem;
+    padding: .35rem .75rem;
+    border: 1px solid #fff;
+    font-size: .95rem;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+
+  .socialLinks {
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+    margin-top: .75rem;
+  }
+
+  .socialLink {
+    min-height: 2.7rem;
+    justify-content: center;
+    border: 1px solid #fff;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .disabledLink.socialLink:hover {
+    color: #fff;
+  }
+
+  .siteFooter {
+    padding-bottom: 2rem;
+    font-size: .9375rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .introduction {
+    min-height: 39rem;
+    margin-top: -13rem;
+  }
+
+  .introductionCopy {
+    width: min(100% - 4rem, 31rem);
+    padding-top: 4rem;
+  }
+
+  .introText {
+    margin-top: -1.5rem;
+  }
+
+  .gallerySection {
+    padding-top: 3rem;
+  }
+
+  .studioSection {
+    min-height: 22rem;
+  }
+
+  .studioContent {
+    min-height: 22rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .headerLogoLink,
+  .wishlistLink,
+  .steamButton,
+  .socialLink {
+    transition: none;
+  }
+
+  .galleryMainFrame {
+    animation: none;
+  }
+}
+
+/* Frame-aligned layout rules. These keep the semantic document flow while
+   matching the three supplied Figma compositions at their reference widths. */
+.galleryCtas {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+@media (min-width: 64rem) {
+  .videoViewport {
+    height: 810px;
+    min-height: 810px;
+  }
+
+  .introduction {
+    min-height: 900px;
+    margin-top: 0;
+  }
+
+  .introductionArt {
+    inset: 77px -14vw 0;
+  }
+
+  .introductionCopy {
+    width: min(100% - 4rem, 32rem);
+    padding-top: 288px;
+    transform: translateX(22px);
+  }
+
+  .introText {
+    margin-top: 32px;
+  }
+
+  .introCtas {
+    display: block;
+    margin-top: 75px;
+  }
+
+  .introPlayCta {
+    display: block;
+  }
+
+  .introPlayCta .steamButton,
+  .galleryCtas .steamButtonDemo {
+    width: 337px;
+  }
+
+  .galleryCtas .steamButtonWishlist {
+    width: 311px;
+  }
+
+  .introMobileCtas {
+    display: none;
+  }
+
+  .gallerySection {
+    min-height: 1063px;
+    padding: 0;
+  }
+
+  .galleryStage {
+    --gallery-frame-width: min(72.4vw, 65.16rem);
+    height: 706px;
+    min-height: 0;
+    align-items: flex-start;
+    padding: 120px 0 0;
+  }
+
+  .galleryMainFrame {
+    width: var(--gallery-frame-width);
+    transform: translateX(9px);
+  }
+
+  .mirrorFrame {
+    display: block;
+    top: 39px;
+    transform: none;
+  }
+
+  .galleryArrow {
+    display: block;
+    top: calc(120px + (var(--gallery-frame-width) / 3.554));
+  }
+
+  .galleryArrowLeft {
+    left: calc(50% - (var(--gallery-frame-width) / 2) - 15px);
+  }
+
+  .galleryArrowRight {
+    right: calc(50% - (var(--gallery-frame-width) / 2) - 33px);
+  }
+
+  .galleryThumbnails {
+    display: none;
+  }
+
+  .galleryCtas {
+    margin-top: 127px;
+  }
+
+  .studioSection {
+    min-height: 1049px;
+  }
+
+  .studioBackdrop {
+    top: 34px;
+    bottom: auto;
+    height: 913px;
+  }
+
+  .studioContent {
+    width: 753px;
+    grid-template-columns: 349px 361px;
+    align-items: start;
+    gap: 43px;
+    min-height: 1049px;
+    padding: 63px 0 0;
+    margin-left: calc(22.22% - 9px);
+    margin-right: 0;
+  }
+
+  .studioLogo {
+    width: 349px;
+    justify-self: start;
+  }
+
+  .studioCopy {
+    width: 361px;
+    margin-top: 32px;
+  }
+
+  .contactSection {
+    width: calc(100% - 154px);
+    grid-template-columns: 633px minmax(0, 1fr);
+    align-items: start;
+    gap: 20px;
+    padding: 0 0 66px;
+  }
+
+  .awards {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .indiecadeBadge {
+    width: 214px;
+  }
+
+  .wingsBadge {
+    width: 330px;
+  }
+
+  .contactContent {
+    margin-top: 23px;
+  }
+
+  .contactPrompt {
+    display: none;
+  }
+
+  .emailLink {
+    margin: 0 0 25px;
+  }
+
+  .siteFooter {
+    height: 48px;
+    padding: 0;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 63.99rem) {
+  .videoViewport {
+    height: 810px;
+    min-height: 810px;
+  }
+
+  .introduction {
+    min-height: 739px;
+    margin-top: -201px;
+  }
+
+  .introductionArt {
+    inset: 43px -76vw 0;
+  }
+
+  .introductionCopy {
+    width: 473px;
+    padding-top: 113px;
+    transform: translateX(7px);
+  }
+
+  .gameLogo {
+    width: 424px;
+    max-width: none;
+  }
+
+  .introText {
+    margin-top: 32px;
+    min-height: 145px;
+  }
+
+  .introCtas {
+    display: block;
+    margin-top: 70px;
+  }
+
+  .introPlayCta .steamButton {
+    width: 337px;
+  }
+
+  .galleryCtas .steamButtonDemo {
+    width: 310px;
+  }
+
+  .galleryCtas .steamButtonWishlist {
+    width: 286px;
+  }
+
+  .introMobileCtas {
+    display: none;
+  }
+
+  .gallerySection {
+    min-height: 738px;
+    padding: 50px 0 0;
+  }
+
+  .galleryStage {
+    height: 400px;
+    min-height: 0;
+    align-items: flex-start;
+    padding: 0 16px;
+  }
+
+  .galleryMainFrame {
+    width: 711px;
+    max-width: none;
+    flex: 0 0 711px;
+    aspect-ratio: 711 / 400;
+    box-shadow: none;
+  }
+
+  .galleryThumbnails {
+    display: flex;
+    width: 711px;
+    justify-content: flex-start;
+    gap: 15px;
+    max-width: none;
+    margin: 21px auto 0;
+    padding-bottom: 7px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    touch-action: pan-x;
+    cursor: grab;
+  }
+
+  .galleryThumbnails::-webkit-scrollbar {
+    display: none;
+  }
+
+  .galleryThumbnails:active {
+    cursor: grabbing;
+  }
+
+  .thumbnail {
+    flex: 0 0 105.885px;
+    width: 105.885px;
+    height: 59.56px;
+    aspect-ratio: 105.885 / 59.56;
+    scroll-snap-align: center;
+  }
+
+  .galleryCtas {
+    gap: 36px;
+    margin-top: 30px;
+    transform: translateX(7px);
+  }
+
+  .studioSection {
+    min-height: 913px;
+  }
+
+  .studioBackdrop {
+    height: 913px;
+  }
+
+  .studioContent {
+    width: 582px;
+    grid-template-columns: 189px 361px;
+    align-items: start;
+    gap: 37px;
+    min-height: 913px;
+    padding: 32px 0 0;
+    margin-left: 81px;
+    margin-right: 0;
+  }
+
+  .studioLogo {
+    width: 189px;
+    justify-self: start;
+  }
+
+  .studioCopy {
+    width: 361px;
+    margin-top: 0;
+  }
+
+  .contactSection {
+    width: 582px;
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 45px 0 26px;
+    margin-left: 81px;
+    margin-right: 0;
+  }
+
+  .awards {
+    justify-content: flex-start;
+    gap: 37px;
+  }
+
+  .indiecadeBadge {
+    width: 214px;
+  }
+
+  .wingsBadge {
+    width: 330px;
+  }
+
+  .contactContent {
+    margin-top: 62px;
+  }
+
+  .socialLinks {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0 50px;
+    margin-top: 20px;
+  }
+
+  .socialLink {
+    min-height: 32px;
+    color: var(--muted);
+    font-family: "Signika Negative", system-ui, sans-serif;
+    font-size: 20px;
+  }
+
+  .contactPrompt {
+    display: none;
+  }
+
+  .emailLink {
+    margin: 0 0 25px;
+  }
+
+  .contactSection {
+    padding-bottom: 62px;
+  }
+
+  .siteFooter {
+    height: 50px;
+    padding: 7px 16px 0;
+  }
+}
+
+@media (max-width: 37.49rem) {
+  .videoViewport {
+    height: 609px;
+    min-height: 609px;
+  }
+
+  .introduction {
+    min-height: 726px;
+    margin-top: -222px;
+  }
+
+  .introductionArt {
+    inset: 0 -120vw 0;
+  }
+
+  .introductionCopy {
+    width: min(339px, calc(100vw - 48px));
+    padding-top: 102px;
+    transform: translateX(7.5px);
+  }
+
+  .gameLogo {
+    width: min(78.1vw, 314px);
+  }
+
+  .introText {
+    width: 266px;
+    margin-top: 61px;
+    font-size: 17px;
+  }
+
+  .introText p + p {
+    margin-top: 1.25rem;
+  }
+
+  .introCtas {
+    display: block;
+    margin-top: 63px;
+  }
+
+  .introPlayCta {
+    display: none;
+  }
+
+  .introMobileCtas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 29px;
+  }
+
+  .steamButton {
+    min-height: 45px;
+    padding: 9px 16px;
+    font-size: 21.371px;
+  }
+
+  .steamIcon {
+    width: 22.5px;
+    height: 22.5px;
+  }
+
+  .gallerySection {
+    min-height: 307px;
+    padding: 59px 0 0;
+  }
+
+  .galleryStage {
+    height: 206px;
+    min-height: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 18px;
+  }
+
+  .mirrorFrame,
+  .galleryArrow {
+    display: none;
+  }
+
+  .galleryMainFrame {
+    width: calc(100vw - 36px);
+    max-width: none;
+    flex: 0 0 calc(100vw - 36px);
+    aspect-ratio: 366 / 206;
+    border-width: 1px;
+    box-shadow: none;
+  }
+
+  .galleryThumbnails {
+    display: flex;
+    justify-content: flex-start;
+    gap: 9px;
+    width: calc(100vw - 36px);
+    max-width: none;
+    margin: 11px 0 0 18px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    touch-action: pan-x;
+    cursor: grab;
+  }
+
+  .galleryThumbnails::-webkit-scrollbar {
+    display: none;
+  }
+
+  .galleryThumbnails:active {
+    cursor: grabbing;
+  }
+
+  .thumbnail {
+    flex: 0 0 54.5px;
+    width: 54.5px;
+    height: 30.66px;
+    aspect-ratio: 54.5 / 30.66;
+    border-width: 1px;
+    scroll-snap-align: center;
+  }
+
+  .galleryCtas {
+    display: none;
+  }
+
+  .studioSection {
+    min-height: 832px;
+  }
+
+  .studioBackdrop {
+    height: 832px;
+    opacity: .55;
+  }
+
+  .studioContent {
+    width: 326px;
+    grid-template-columns: 131px 176px;
+    align-items: start;
+    gap: 19px;
+    min-height: 832px;
+    padding: 92px 0 0;
+    margin-left: 51px;
+    margin-right: 0;
+  }
+
+  .studioLogo {
+    width: 131px;
+    justify-self: start;
+  }
+
+  .studioCopy {
+    width: 176px;
+    margin-top: 0;
+  }
+
+  .studioCopy p {
+    font-size: 15px;
+  }
+
+  .contactSection {
+    position: relative;
+    display: flex;
+    width: calc(100vw - 65px);
+    flex-direction: column;
+    gap: 0;
+    align-items: stretch;
+    margin-top: -462px;
+    margin-left: 33px;
+    margin-right: 0;
+    padding: 0 0 0;
+  }
+
+  .awards {
+    height: 113px;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .indiecadeBadge {
+    width: 113.45px;
+  }
+
+  .wingsBadge {
+    width: 175.07px;
+  }
+
+  .contactContent {
+    margin-top: 61px;
+  }
+
+  .contactPrompt,
+  .socialPrompt {
+    display: block;
+    font-size: 20px;
+  }
+
+  .emailLink {
+    width: 100%;
+    margin: 5px 0 61px;
+    font-size: 16px;
+  }
+
+  .socialLinks {
+    margin-top: 5px;
+  }
+
+  .siteFooter {
+    height: 85px;
+    padding: 29px 16px 0;
+    font-size: 15px;
+  }
+}
+
+/* Keep the tablet composition fluid before the phone breakpoint. This avoids
+   clipping the 711px reference frame when the viewport is between 600px and
+   768px wide. */
+@media (min-width: 37.5rem) and (max-width: 47.99rem) {
+  .gallerySection {
+    min-height: auto;
+    padding-bottom: 112px;
+  }
+
+  .galleryCarousel {
+    width: min(711px, calc(100% - 32px));
+    margin: 0 auto;
+  }
+
+  .galleryStage {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+  }
+
+  .galleryMainFrame {
+    width: 100%;
+    max-width: none;
+    flex: 0 0 100%;
+    aspect-ratio: 1.777 / 1;
+  }
+
+  .galleryThumbnails {
+    width: 100%;
+    margin: 21px 0 0;
+  }
+
+  .galleryCtas {
+    width: min(100% - 32px, 711px);
+    gap: clamp(16px, 4.7vw, 36px);
+    margin: 30px auto 0;
+    transform: none;
+  }
+
+  .galleryCtas .steamButtonDemo,
+  .galleryCtas .steamButtonWishlist {
+    width: calc((100% - clamp(16px, 4.7vw, 36px)) / 2);
+  }
+}
+
+/* Below the tablet breakpoint the main frame must determine the stage
+   height. The old 206px stage was only correct for the 375px reference
+   frame; at widths such as 594px the taller image covered the thumbnail rail. */
+@media (max-width: 37.49rem) {
+  .galleryStage {
+    height: auto;
+  }
+}
+
+/* Fluid bridge between the tablet and desktop compositions. The supplied
+   reference frames are intentionally fixed at 768px and 1024px, but the
+   browser still needs a stable layout while it is being resized between them. */
+@media (min-width: 48rem) and (max-width: 63.99rem) {
+  .introduction {
+    min-height: calc(62.890625vw + 256px);
+    margin-top: calc(78.515625vw - 804px);
+  }
+
+  .introductionArt {
+    inset: clamp(43px, calc(13.28125vw - 59px), 77px)
+      calc(172vw - 1905px) 0;
+  }
+
+  .introductionCopy {
+    width: calc(15.234375vw + 356px);
+    padding-top: calc(68.359375vw - 412px);
+    transform: translateX(calc(5.859375vw - 38px));
+  }
+
+  .introCtas {
+    margin-top: calc(1.953125vw + 55px);
+  }
+
+  .gallerySection {
+    --gallery-frame-width: calc(11.71875vw + 621px);
+    min-height: auto;
+    padding-top: calc(27.34375vw - 160px);
+    padding-bottom: 112px;
+  }
+
+  .galleryStage {
+    height: calc(var(--gallery-frame-width) / 1.777);
+    padding: 0 16px;
+  }
+
+  .galleryMainFrame {
+    width: var(--gallery-frame-width);
+    flex-basis: var(--gallery-frame-width);
+    aspect-ratio: 1.777 / 1;
+  }
+
+  .galleryThumbnails {
+    width: var(--gallery-frame-width);
+    margin: 21px auto 0;
+  }
+
+  .galleryCtas {
+    gap: calc(1.5625vw + 24px);
+    margin-top: 30px;
+  }
+
+  .galleryCtas .steamButtonDemo {
+    width: calc(10.546875vw + 229px);
+  }
+
+  .galleryCtas .steamButtonWishlist {
+    width: calc(9.765625vw + 211px);
+  }
+
+  .studioSection,
+  .studioBackdrop {
+    min-height: calc(53.125vw + 505px);
+    height: calc(53.125vw + 505px);
+  }
+
+  .studioContent {
+    width: calc(66.796875vw + 69px);
+    grid-template-columns: calc(62.5vw - 291px) 361px;
+    gap: calc(2.34375vw + 19px);
+    min-height: calc(53.125vw + 505px);
+    padding-top: calc(3.515625vw + 5px);
+    margin-left: calc(53.515625vw - 330px);
+  }
+
+  .studioLogo {
+    width: calc(62.5vw - 291px);
+  }
+}
+
+/* The second key-art panel is a fixed 1021px-tall canvas in the design.
+   Keep that artwork height independent from the responsive copy layout so it
+   does not collapse to the shorter section heights used by the old frames. */
+.introduction {
+  min-height: 1021px;
+}
+
+.introductionArt {
+  top: 0;
+  right: -14vw;
+  bottom: auto;
+  left: -14vw;
+  height: 1021px;
+}
+
+@media (min-width: 37.5rem) and (max-width: 63.99rem) {
+  .introduction {
+    min-height: calc(1021px + clamp(43px, calc(13.28125vw - 59px), 77px));
+  }
+
+  .introductionArt {
+    top: clamp(43px, calc(13.28125vw - 59px), 77px);
+  }
+}
+
+@media (min-width: 64rem) {
+  .introduction {
+    min-height: 1098px;
+  }
+
+  .introductionArt {
+    top: 77px;
+  }
+}
+
+/* The studio artwork is a fixed-height canvas in the reference layout.
+   Keep the background and its section at 1021px while allowing the internal
+   columns to continue adapting horizontally at each responsive breakpoint. */
+.studioSection,
+.studioBackdrop,
+.studioContent {
+  height: 1021px;
+  min-height: 1021px;
+}
+
+.studioBackdrop {
+  top: 0;
+  bottom: auto;
+}
