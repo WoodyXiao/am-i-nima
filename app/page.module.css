@@ -1700,3 +1700,125 @@
   top: 0;
   bottom: auto;
 }
+
+/* Keep the artwork sizing independent from the document-flow heights. The
+   reference compositions overlap the studio/contact artwork, so using the
+   1021px canvas as the section height pushes the footer too far down. */
+@media (min-width: 64rem) {
+  .introduction {
+    min-height: 900px;
+  }
+
+  .studioSection,
+  .studioContent {
+    height: 1049px;
+    min-height: 1049px;
+  }
+
+  .studioBackdrop {
+    top: 34px;
+    height: 913px;
+    min-height: 0;
+  }
+
+  .siteFooter {
+    width: 165px;
+    height: 24px;
+    margin-top: 1px;
+    margin-right: calc(22px - (100vw - 100%));
+    margin-left: auto;
+    padding: 0;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 48rem) and (max-width: 63.99rem) {
+  .introduction {
+    min-height: calc(62.890625vw + 256px);
+  }
+
+  .studioSection,
+  .studioContent {
+    height: calc(53.125vw + 505px);
+    min-height: calc(53.125vw + 505px);
+  }
+
+  .studioBackdrop {
+    top: 0;
+    height: 913px;
+    min-height: 0;
+  }
+
+  .siteFooter {
+    width: 165px;
+    height: 24px;
+    margin-right: calc(49px - (100vw - 100%));
+    margin-left: auto;
+    padding: 0;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 47.99rem) {
+  .introduction {
+    min-height: 739px;
+  }
+
+  .studioSection,
+  .studioContent {
+    height: 913px;
+    min-height: 913px;
+  }
+
+  .studioBackdrop {
+    top: 0;
+    height: 913px;
+    min-height: 0;
+  }
+
+  .siteFooter {
+    width: 165px;
+    height: 24px;
+    margin-right: calc(49px - (100vw - 100%));
+    margin-left: auto;
+    padding: 0;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 37.49rem) {
+  .introduction {
+    min-height: 726px;
+  }
+
+  .studioSection,
+  .studioContent {
+    height: 832px;
+    min-height: 832px;
+  }
+
+  .studioBackdrop {
+    top: 0;
+    height: 832px;
+    min-height: 0;
+  }
+
+  .siteFooter {
+    width: 165px;
+    height: 53px;
+    position: relative;
+    left: calc((100vw - 100%) / 2);
+    margin-right: auto;
+    margin-left: auto;
+    padding: 29px 0 0;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
