@@ -1717,8 +1717,12 @@
 
   .studioBackdrop {
     top: 34px;
+    right: auto;
+    left: 50%;
+    width: 1544px;
     height: 913px;
     min-height: 0;
+    transform: translateX(-50%);
   }
 
   .siteFooter {
