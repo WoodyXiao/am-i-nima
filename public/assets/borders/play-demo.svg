@@ -1,17 +1,9 @@
-<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="352.873" height="88.4034" viewBox="0 0 352.873 88.4034" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Rectangle 8" filter="url(#filter0_d_0_5)">
-<path d="M21.0231 2.70288L350.282 20.411V63.7732L316.782 83.2029L3.28215 75.1245L21.0231 2.70288Z" fill="black"/>
-<path d="M351.578 64.5193L350.933 64.8943L317.433 84.324L317.115 84.5076L316.749 84.4978L3.24895 76.4197L1.64152 76.3787L2.02336 74.8162L19.7646 2.39429L20.0204 1.35132L21.0927 1.40894L350.351 19.1169L351.578 19.1834V64.5193Z" stroke="#E5E7E6" stroke-width="2.59127"/>
-</g>
-<defs>
-<filter id="filter0_d_0_5" x="0" y="0" width="352.873" height="88.4034" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="2.59127"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.898039 0 0 0 0 0.905882 0 0 0 0 0.901961 0 0 0 1 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_5"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_5" result="shape"/>
-</filter>
-</defs>
+<svg preserveAspectRatio="none" style="display: block;" width="352.873" height="88.4034" viewBox="0 0 352.873 88.4034" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M21.0231 2.70288L350.282 20.411V63.7732L316.782 83.2029L3.28215 75.1245L21.0231 2.70288Z"
+    fill="black"
+    stroke="#E5E7E6"
+    stroke-width="2.59127"
+    stroke-linejoin="round"
+  />
 </svg>
