@@ -19,15 +19,9 @@ export function SiteHeader() {
             priority
           />
         </a>
-        {wishlistUrl ? (
-          <a className={styles.wishlistLink} href={wishlistUrl} target="_blank" rel="noreferrer">
-            Wishlist Now!
-          </a>
-        ) : (
-          <span className={`${styles.wishlistLink} ${styles.disabledLink}`} aria-label="Wishlist link coming soon">
-            Wishlist Now!
-          </span>
-        )}
+        <a className={styles.wishlistLink} href={wishlistUrl} target="_blank" rel="noreferrer">
+          Wishlist Now!
+        </a>
       </div>
     </header>
   );

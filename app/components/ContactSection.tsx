@@ -2,10 +2,7 @@ import Image from "next/image";
 import styles from "../page.module.css";
 import { assetPath, siteContent } from "../content";
 
-function SafeExternalLink({ label, url, className = "" }: { label: string; url: string | null; className?: string }) {
-  if (!url) {
-    return <span className={`${className} ${styles.disabledLink}`} aria-disabled="true">{label}</span>;
-  }
+function SafeExternalLink({ label, url, className = "" }: { label: string; url: string; className?: string }) {
   return <a className={className} href={url} target="_blank" rel="noreferrer">{label}</a>;
 }
 

@@ -4,7 +4,7 @@ import { assetPath } from "../content";
 
 type SteamButtonProps = {
   label: string;
-  href: string | null;
+  href: string;
   variant: "demo" | "wishlist";
 };
 
@@ -22,23 +22,7 @@ export function SteamButton({ label, href, variant }: SteamButtonProps) {
     </>
   );
 
-  const className = `${styles.steamButton} ${variant === "wishlist" ? styles.steamButtonWishlist : styles.steamButtonDemo} ${!href ? styles.disabledCta : ""}`;
-
-  if (!href) {
-    return (
-      <span className={className} aria-disabled="true">
-        <Image
-          src={assetPath(variant === "wishlist" ? "/assets/borders/wishlist.svg" : "/assets/borders/play-demo.svg")}
-          alt=""
-          fill
-          sizes="350px"
-          className={styles.steamButtonBorder}
-          aria-hidden="true"
-        />
-        {content}
-      </span>
-    );
-  }
+  const className = `${styles.steamButton} ${variant === "wishlist" ? styles.steamButtonWishlist : styles.steamButtonDemo}`;
 
   return (
     <a className={className} href={href} target="_blank" rel="noreferrer">

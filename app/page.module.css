@@ -71,16 +71,6 @@
   opacity: 1;
 }
 
-.disabledLink,
-.disabledCta {
-  cursor: default;
-}
-
-.disabledLink:hover {
-  color: inherit;
-  opacity: .6;
-}
-
 .videoViewport {
   position: relative;
   width: 100%;
@@ -251,15 +241,6 @@
 
 .steamButton:active {
   transform: translateY(0);
-}
-
-.disabledCta {
-  color: rgba(229, 231, 230, .8);
-}
-
-.disabledCta:hover {
-  color: rgba(229, 231, 230, .8);
-  transform: none;
 }
 
 .steamIcon {
@@ -902,10 +883,6 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     line-height: 1.6;
-  }
-
-  .disabledLink.socialLink:hover {
-    color: #fff;
   }
 
   .siteFooter {

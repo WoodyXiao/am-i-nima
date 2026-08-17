@@ -1,5 +1,7 @@
 export type ExternalLink = string | null;
 
+const temporaryLink = "about:blank";
+
 export const siteContent = {
   title: "Am I Nima?",
   description:
@@ -7,8 +9,8 @@ export const siteContent = {
   videoSrc: "/videos/home-video.mp4",
   videoUrl: null as ExternalLink,
   steam: {
-    demoUrl: null as ExternalLink,
-    wishlistUrl: null as ExternalLink,
+    demoUrl: temporaryLink,
+    wishlistUrl: temporaryLink,
   },
   intro: {
     firstParagraph: "Am I Nima puts you in control of Nima’s fractured mind.",
@@ -23,14 +25,14 @@ export const siteContent = {
     email: "ho.games.studio@gmail.com",
   },
   socials: [
-    { label: "Steam", url: null as ExternalLink },
-    { label: "Discord", url: null as ExternalLink },
-    { label: "YouTube", url: null as ExternalLink },
-    { label: "Instagram", url: null as ExternalLink },
-    { label: "Tumblr", url: null as ExternalLink },
-    { label: "X", url: null as ExternalLink },
-    { label: "Bluesky", url: null as ExternalLink },
-    { label: "TikTok", url: null as ExternalLink },
+    { label: "Steam", url: temporaryLink },
+    { label: "Discord", url: temporaryLink },
+    { label: "YouTube", url: temporaryLink },
+    { label: "Instagram", url: temporaryLink },
+    { label: "Tumblr", url: temporaryLink },
+    { label: "X", url: temporaryLink },
+    { label: "Bluesky", url: temporaryLink },
+    { label: "TikTok", url: temporaryLink },
   ],
   gallery: [
     {
