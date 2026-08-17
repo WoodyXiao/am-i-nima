@@ -4,6 +4,7 @@ export const siteContent = {
   title: "Am I Nima?",
   description:
     "Am I Nima puts you in control of Nima's fractured mind. Explore a dark narrative puzzle game from Ho Games Studio.",
+  videoSrc: "/videos/home-video.mp4",
   videoUrl: null as ExternalLink,
   steam: {
     demoUrl: null as ExternalLink,

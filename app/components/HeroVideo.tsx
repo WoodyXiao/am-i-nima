@@ -3,11 +3,26 @@ import styles from "../page.module.css";
 import { assetPath, siteContent } from "../content";
 
 export function HeroVideo() {
+  const videoSrc = siteContent.videoSrc;
   const videoUrl = siteContent.videoUrl;
 
   return (
     <section className={styles.videoViewport} aria-label="Am I Nima trailer">
-      {videoUrl ? (
+      {videoSrc ? (
+        <div className={styles.videoMedia}>
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            poster={assetPath("/assets/images/nima-mirror.png")}
+            aria-label="Am I Nima official trailer"
+          >
+            <source src={assetPath(videoSrc)} type="video/mp4" />
+          </video>
+        </div>
+      ) : videoUrl ? (
         <div className={styles.videoMedia}>
           <iframe
             src={videoUrl}
