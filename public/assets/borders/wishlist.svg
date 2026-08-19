@@ -1,9 +1,11 @@
-<svg width="337" height="77" viewBox="0 0 337 77" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path
-    d="M3.61426 7.61719L312.767 2.61719L333.614 44.6172L297.513 71.6172L23.9532 66.6172L3.61426 7.61719Z"
-    fill="black"
-    stroke="#E5E7E6"
-    stroke-width="2.59127"
-    stroke-linejoin="round"
-  />
+<svg width="235" height="79" viewBox="0 0 235 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_1_39)">
+<path d="M3.5614 8.63965L210.561 2.63965L231.409 47.6396L195.307 73.6396L23.9004 69.6396L3.5614 8.63965Z" fill="black"/>
+<path d="M211.737 2.09473L232.585 47.0947L233.034 48.0654L232.166 48.6914L196.064 74.6914L195.712 74.9453L195.277 74.9346L23.87 70.9346L22.9598 70.9141L22.6718 70.0498L2.33191 9.0498L1.78113 7.39551L3.52429 7.34473L210.524 1.34473L211.378 1.31934L211.737 2.09473Z" stroke="#E5E7E6" stroke-width="2.59127"/>
+</g>
+<defs>
+<filter id="filter0_d_1_39" x="-4" y="-4" width="243" height="87" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feDropShadow dx="0" dy="2.59127" stdDeviation="0" flood-color="#E5E7E6" flood-opacity="1"/>
+</filter>
+</defs>
 </svg>

@@ -13,9 +13,8 @@ export const siteContent = {
     wishlistUrl: temporaryLink,
   },
   intro: {
-    firstParagraph: "Am I Nima puts you in control of Nima’s fractured mind.",
-    secondParagraph:
-      "Trapped by your mother in a dimly lit basement, you must pass her tests and navigate once-familiar rooms if you want to escape.",
+    description:
+      "Am I Nima is a psychological-horror game where you must convince your mom that you really are her daughter. Combine words together in your brain and use them to talk. Get her to trust you.",
   },
   studio: {
     description:

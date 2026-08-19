@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import styles from "../page.module.css";
 import { assetPath, siteContent } from "../content";
-import { SteamButton } from "./SteamButton";
 
 export function ScreenshotGallery() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -55,7 +54,7 @@ export function ScreenshotGallery() {
             <Image src={assetPath(previous.src)} alt="" fill sizes="220px" className={styles.mirrorImageLeft} />
             <span className={`${styles.previewShade} ${styles.previewShadeLeft}`} />
           </div>
-          <div className={styles.galleryMainFrame} key={active.src} aria-live="polite">
+          <div className={styles.galleryMainFrame} aria-live="polite">
             <Image
               src={assetPath(active.src)}
               alt={active.alt}
@@ -120,10 +119,6 @@ export function ScreenshotGallery() {
             </button>
           ))}
         </div>
-      </div>
-      <div className={styles.galleryCtas}>
-        <SteamButton label="Play demo on Steam" href={siteContent.steam.demoUrl} variant="demo" />
-        <SteamButton label="Wishlist on Steam" href={siteContent.steam.wishlistUrl} variant="wishlist" />
       </div>
     </section>
   );

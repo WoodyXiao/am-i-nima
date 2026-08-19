@@ -26,17 +26,11 @@ export function GameIntroduction() {
         />
         <p className={styles.releaseDate}>Coming October 8th, 2026</p>
         <div className={styles.introText}>
-          <p>{siteContent.intro.firstParagraph}</p>
-          <p>{siteContent.intro.secondParagraph}</p>
+          <p>{siteContent.intro.description}</p>
         </div>
         <div className={styles.introCtas}>
-          <div className={styles.introPlayCta}>
-            <SteamButton label="Play demo on Steam" href={siteContent.steam.demoUrl} variant="demo" />
-          </div>
-          <div className={styles.introMobileCtas}>
-            <SteamButton label="Play demo on Steam" href={siteContent.steam.demoUrl} variant="demo" />
-            <SteamButton label="Wishlist on Steam" href={siteContent.steam.wishlistUrl} variant="wishlist" />
-          </div>
+          <SteamButton label="Play demo" href={siteContent.steam.demoUrl} variant="demo" />
+          <SteamButton label="Wishlist" href={siteContent.steam.wishlistUrl} variant="wishlist" />
         </div>
       </div>
     </section>

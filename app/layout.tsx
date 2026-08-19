@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "@fontsource/signika-negative/latin.css";
 import "./globals.css";
 import { assetPath } from "./content";
 

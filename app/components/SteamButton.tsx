@@ -9,6 +9,10 @@ type SteamButtonProps = {
 };
 
 export function SteamButton({ label, href, variant }: SteamButtonProps) {
+  const border = variant === "wishlist"
+    ? { src: "/assets/borders/wishlist.svg", width: 235, height: 79 }
+    : { src: "/assets/borders/play-demo.svg", width: 234, height: 84 };
+
   const content = (
     <>
       <span>{label}</span>
@@ -27,10 +31,10 @@ export function SteamButton({ label, href, variant }: SteamButtonProps) {
   return (
     <a className={className} href={href} target="_blank" rel="noreferrer">
       <Image
-        src={assetPath(variant === "wishlist" ? "/assets/borders/wishlist.svg" : "/assets/borders/play-demo.svg")}
+        src={assetPath(border.src)}
         alt=""
-        fill
-        sizes="350px"
+        width={border.width}
+        height={border.height}
         className={styles.steamButtonBorder}
         aria-hidden="true"
       />
