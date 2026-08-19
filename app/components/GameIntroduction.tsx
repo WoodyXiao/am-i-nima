@@ -20,10 +20,11 @@ export function GameIntroduction() {
           id="game-title"
           src={assetPath("/assets/logos/am-i-nima-logo.png")}
           alt="Am I Nima?"
-          width={424}
-          height={238}
+          width={536}
+          height={301}
           className={styles.gameLogo}
         />
+        <p className={styles.releaseDate}>Coming October 8th, 2026</p>
         <div className={styles.introText}>
           <p>{siteContent.intro.firstParagraph}</p>
           <p>{siteContent.intro.secondParagraph}</p>

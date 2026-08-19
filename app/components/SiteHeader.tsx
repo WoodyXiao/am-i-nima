@@ -9,13 +9,13 @@ export function SiteHeader() {
     <header className={styles.siteHeader}>
       <div className={styles.headerGradient} aria-hidden="true" />
       <div className={styles.headerInner}>
-        <a className={styles.headerLogoLink} href="#top" aria-label="Ho Games Studio home">
+        <a className={styles.headerLogoLink} href="#top" aria-label="Am I Nima? home">
           <Image
             className={styles.headerLogo}
-            src={assetPath("/assets/logos/ho-games.png")}
-            alt="Ho Games Studio"
-            width={104}
-            height={67}
+            src={assetPath("/assets/logos/am-i-nima-logo.png")}
+            alt="Am I Nima?"
+            width={106}
+            height={60}
             priority
           />
         </a>

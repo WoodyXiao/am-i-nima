@@ -35,8 +35,8 @@
 
 .headerLogoLink {
   display: inline-flex;
-  width: 6.5rem;
-  height: 4.1875rem;
+  width: 106px;
+  height: 60px;
   opacity: .6;
   transition: opacity .2s ease;
 }
@@ -179,6 +179,10 @@
   width: min(26.5rem, 82vw);
   height: auto;
   object-fit: contain;
+}
+
+.releaseDate {
+  display: none;
 }
 
 .introText {
@@ -956,13 +960,30 @@
   }
 
   .introductionCopy {
-    width: min(100% - 4rem, 32rem);
-    padding-top: 288px;
-    transform: translateX(22px);
+    width: 536px;
+    padding-top: 158px;
+    transform: translateX(calc(15px + (100vw - 100%) / 2));
+  }
+
+  .gameLogo {
+    width: 536px;
+    max-width: none;
+  }
+
+  .releaseDate {
+    display: block;
+    width: 500px;
+    height: 38px;
+    margin: -19px 0 0;
+    color: var(--paper);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: center;
   }
 
   .introText {
-    margin-top: 32px;
+    margin-top: 92px;
   }
 
   .introCtas {
