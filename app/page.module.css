@@ -113,6 +113,18 @@
   background: radial-gradient(circle at 52% 58%, rgba(0, 71, 52, .05), rgba(0, 0, 0, .45) 78%), linear-gradient(to bottom, rgba(0, 0, 0, .08), rgba(0, 0, 0, .24));
 }
 
+.videoBottomFade {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 222px;
+  background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+  pointer-events: none;
+}
+
 .videoFallbackLabel {
   position: absolute;
   right: clamp(1.5rem, 5vw, 5rem);
@@ -1792,7 +1804,7 @@
 /* Keep the desktop-to-tablet carousel as one proportional composition. The
    1425 x 706 canvas is the desktop reference; every child scales with it
    while the viewport is resized down toward the tablet breakpoint. */
-@media (min-width: 48rem) {
+@media (min-width: 46.5625rem) {
   .galleryStage {
     display: block;
     width: min(100%, 90rem);
@@ -1973,5 +1985,219 @@
     flex: 0 0 auto;
     width: 361px;
     margin-top: 32px;
+  }
+}
+
+/* The gallery section should finish at the carousel. On smaller screens the
+   thumbnail rail remains in normal flow, so its own height is included before
+   the section ends. */
+.gallerySection {
+  height: auto;
+  min-height: 0;
+  padding-bottom: 0;
+  background: transparent;
+}
+
+.gallerySection::before {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #050706;
+  content: "";
+  pointer-events: none;
+}
+
+.galleryCarousel {
+  position: relative;
+  z-index: 1;
+}
+
+/* On the desktop/tablet composition, the section background starts at the
+   main frame. The two side previews stay above that boundary and can overlap
+   the preceding introduction section. */
+@media (min-width: 46.5625rem) {
+  .videoBottomFade {
+    display: block;
+  }
+
+  .gallerySection {
+    padding-top: 0;
+  }
+
+  .introduction::before {
+    height: 222px;
+    background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  .introduction::after {
+    display: none;
+  }
+
+  .gallerySection::before {
+    top: 17%;
+  }
+}
+
+/* 744px is the tablet reference frame. It includes the thumbnail rail and
+   does not keep the 50px desktop transition spacer above the main image. */
+@media (min-width: 37.5rem) and (max-width: 46.5rem) {
+  .gallerySection {
+    padding-top: 0;
+  }
+
+  .galleryThumbnails {
+    display: flex;
+  }
+}
+
+/* The three supplied responsive references are 1440, 744 and 402px. Keep
+   the hero and introduction in normal document flow, and interpolate the
+   hero height between those references instead of pulling the introduction
+   upward with breakpoint-specific negative margins. */
+.introduction {
+  margin-top: 0;
+}
+
+@media (min-width: 1440px) {
+  .videoViewport {
+    height: 810px;
+    min-height: 810px;
+  }
+}
+
+@media (min-width: 744px) and (max-width: 1439px) {
+  .videoViewport {
+    height: calc(28.87931vw + 394.13793px);
+    min-height: 0;
+  }
+}
+
+@media (min-width: 402px) and (max-width: 743px) {
+  .videoViewport {
+    height: calc(64.91228vw + 126.05263px);
+    min-height: 0;
+  }
+}
+
+@media (max-width: 46.5rem) {
+  .videoMedia,
+  .videoFallback {
+    height: 100%;
+  }
+}
+
+@media (max-width: 401px) {
+  .videoViewport {
+    height: 387px;
+    min-height: 387px;
+  }
+}
+
+/* Vertical rhythm between the gallery, studio and footer/contact regions.
+   The value interpolates between the 744px and 1440px reference frames. */
+.pageShell {
+  --section-bridge-space: clamp(
+    140px,
+    calc(11.63793vw + 53.4181px),
+    221px
+  );
+}
+
+@media (min-width: 403px) {
+  .gallerySection,
+  .studioSection {
+    margin-bottom: var(--section-bridge-space);
+  }
+}
+
+/* At the tablet reference, the space above the carousel belongs to the
+   introduction artwork, while the space below it belongs to the studio.
+   Keeping those gaps inside their adjacent sections preserves each section's
+   intended background instead of exposing a detached black margin. */
+@media (min-width: 403px) and (max-width: 744px) {
+  .introduction {
+    min-height: 866px;
+    overflow: hidden;
+  }
+
+  .gallerySection {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .studioSection {
+    display: flex;
+    height: auto;
+    min-height: 0;
+    flex-direction: column;
+    overflow: hidden;
+    padding-top: 140px;
+    background: #000;
+  }
+
+  .studioContent {
+    --studio-tablet-logo-width: clamp(
+      131px,
+      calc(16.95906vw + 62.82456px),
+      189px
+    );
+    --studio-tablet-gap: clamp(
+      19px,
+      calc(3.80117vw + 3.7193px),
+      32px
+    );
+    position: relative;
+    order: 1;
+    display: grid;
+    width: clamp(326px, calc(74.8538vw + 25.08772px), 582px);
+    height: auto;
+    min-height: 0;
+    grid-template-columns: var(--studio-tablet-logo-width) minmax(0, 1fr);
+    align-items: start;
+    gap: var(--studio-tablet-gap);
+    padding: 0;
+    margin: 0 auto 140px;
+  }
+
+  .studioLogo {
+    width: 100%;
+    height: auto;
+    justify-self: start;
+  }
+
+  .studioCopy {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .studioBackdrop {
+    position: relative;
+    order: 2;
+    inset: auto;
+    width: 100%;
+    height: clamp(832px, calc(23.68421vw + 736.78947px), 913px);
+    min-height: 0;
+    margin: 0;
+    transform: none;
+  }
+
+  .contactSection {
+    display: grid;
+    width: clamp(326px, calc(74.8538vw + 25.08772px), 582px);
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-top: 0;
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 744px) {
+  .introduction {
+    min-height: 879px;
   }
 }
