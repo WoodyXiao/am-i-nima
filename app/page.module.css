@@ -544,6 +544,20 @@
   color: var(--green);
 }
 
+.pressKitLink {
+  display: inline-flex;
+  color: var(--paper);
+  font-size: 20px;
+  line-height: 32px;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.pressKitLink:hover,
+.pressKitLink:focus-visible {
+  color: var(--green);
+}
+
   .socialLinks {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1066,15 +1080,34 @@
   }
 
   .contactContent {
-    margin-top: 23px;
+    margin-top: 0;
   }
 
   .contactPrompt {
     display: none;
   }
 
+  .socialPrompt {
+    display: none;
+  }
+
   .emailLink {
     margin: 0 0 25px;
+  }
+
+  .pressKitLink {
+    margin-top: -17px;
+    margin-bottom: 8px;
+  }
+
+  .socialLinks {
+    margin-top: 0;
+  }
+
+  .socialLink {
+    min-height: 24px;
+    font-size: 15px;
+    line-height: 24px;
   }
 
   .siteFooter {
@@ -1884,5 +1917,61 @@
 @media (min-width: 46.5rem) and (max-width: 63.99rem) {
   .introductionCopy {
     width: 500px;
+  }
+}
+
+/* Desktop studio reference: the key art is a fixed 1163 x 687 canvas on
+   the left, while the remaining page area stays pure black. */
+@media (min-width: 64rem) {
+  .studioSection {
+    height: 687px;
+    min-height: 687px;
+    background: #000;
+  }
+
+  .studioBackdrop {
+    top: 0;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    width: 1163px;
+    height: 687px;
+    opacity: .8;
+    transform: none;
+  }
+
+  .studioBackdropImage {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .studioBackdropShade {
+    background: linear-gradient(90deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .58));
+  }
+
+  .studioContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 361px;
+    height: 687px;
+    min-height: 687px;
+    gap: 0;
+    padding: 160px 0 0;
+    margin-left: calc(100% - 572px);
+    margin-right: 0;
+  }
+
+  .studioLogo {
+    flex: 0 0 auto;
+    width: 349px;
+    height: auto;
+    justify-self: auto;
+  }
+
+  .studioCopy {
+    flex: 0 0 auto;
+    width: 361px;
+    margin-top: 32px;
   }
 }

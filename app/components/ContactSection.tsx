@@ -15,9 +15,12 @@ export function ContactSection() {
       </div>
       <div className={styles.contactContent}>
         <h2 id="contact-title" className={styles.visuallyHidden}>Contact and social links</h2>
-        <p className={styles.contactPrompt}>Email us at:</p>
         <a className={styles.emailLink} href={`mailto:${siteContent.contact.email}`}>{siteContent.contact.email}</a>
-        <p className={styles.socialPrompt}>Join us on:</p>
+        <SafeExternalLink
+          label="Get Press Kit"
+          url={siteContent.contact.pressKitUrl}
+          className={styles.pressKitLink}
+        />
         <nav className={styles.socialLinks} aria-label="Social links">
           {siteContent.socials.map((social) => (
             <SafeExternalLink key={social.label} label={social.label} url={social.url} className={styles.socialLink} />

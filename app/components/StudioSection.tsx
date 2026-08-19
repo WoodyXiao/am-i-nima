@@ -6,15 +6,14 @@ export function StudioSection() {
   return (
     <section className={styles.studioSection} aria-labelledby="studio-title">
       <div className={styles.studioBackdrop} aria-hidden="true">
-        <Image
-          src={assetPath("/assets/images/nima-main-menu.png")}
-          alt=""
-          fill
-          sizes="100vw"
-          className={styles.studioBackdropImage}
-        />
-        <div className={styles.studioBackdropShade} />
-      </div>
+          <Image
+            src={assetPath("/assets/images/nima-main-menu.png")}
+            alt=""
+            fill
+            sizes="100vw"
+            className={styles.studioBackdropImage}
+          />
+        </div>
       <div className={styles.studioContent}>
         <Image
           src={assetPath("/assets/logos/ho-games.png")}

@@ -22,6 +22,7 @@ export const siteContent = {
   },
   contact: {
     email: "ho.games.studio@gmail.com",
+    pressKitUrl: temporaryLink,
   },
   socials: [
     { label: "Steam", url: temporaryLink },
