@@ -2241,9 +2241,15 @@
 
 /* Revised 1600px desktop footer composition. */
 @media (min-width: 64rem) {
+  .studioSection {
+    width: min(1317px, calc(100% - 48px));
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   .contactSection {
     display: grid;
-    width: 100%;
+    width: min(1317px, calc(100% - 48px));
     height: 426px;
     grid-template-columns: 57.5% 42.5%;
     grid-template-rows: 55px 85px 53px;
@@ -2253,7 +2259,8 @@
       "press awards";
     gap: 0;
     align-items: start;
-    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
     padding: 70px 23px 0;
   }
 
@@ -2275,9 +2282,9 @@
     grid-area: email;
     margin: 0;
     color: var(--paper);
-    font-size: 48px;
+    font-size: clamp(30px, 3vw, 48px);
     font-weight: 700;
-    line-height: 58px;
+    line-height: 1.2;
     white-space: nowrap;
   }
 
@@ -2348,10 +2355,11 @@
   }
 
   .siteFooter {
-    width: calc(100% - 86px);
+    width: min(1317px, calc(100% - 48px));
     height: 118px;
     border-top: 1px solid var(--Link_Default);
-    margin: 0 43px;
+    margin-right: auto;
+    margin-left: auto;
     padding: 28px 0 0;
     color: var(--Link_Default);
     font-size: 17px;
