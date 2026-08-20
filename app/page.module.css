@@ -1,15 +1,23 @@
 .pageShell {
   --section-padding: clamp(1.125rem, 4vw, 6rem);
   position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
   overflow: hidden;
   background: #000000;
 }
 
 .siteHeader {
   position: fixed;
-  inset: 0 0 auto;
+  top: 0;
+  right: auto;
+  left: 50%;
   z-index: 20;
+  width: min(100%, 1440px);
   height: 13.875rem;
+  transform: translateX(-50%);
   pointer-events: none;
 }
 
@@ -240,7 +248,7 @@
   line-height: 36px;
   text-decoration: none;
   white-space: nowrap;
-  transition: color .2s ease, transform .2s ease;
+  transition: color .2s ease;
 }
 
 .steamButtonBorder {
@@ -251,17 +259,27 @@
   height: 100%;
   max-width: 100%;
   object-fit: fill;
+  filter: drop-shadow(0 2.59127px 0 #e5e7e6);
   pointer-events: none;
+}
+
+.steamButtonFill {
+  fill: var(--Button_Primary_Background_Default);
+  transition: fill .2s ease;
 }
 
 .steamButton:hover,
 .steamButton:focus-visible {
-  color: var(--green);
-  transform: translateY(-2px);
+  color: var(--paper);
 }
 
-.steamButton:active {
-  transform: translateY(0);
+.steamButton:hover .steamButtonFill,
+.steamButton:focus-visible .steamButtonFill {
+  fill: var(--Button_Primary_Background_Hover);
+}
+
+.steamButton:active .steamButtonFill {
+  fill: var(--Button_Primary_Background_Down);
 }
 
 .steamIcon {
@@ -562,16 +580,22 @@
 
 .pressKitLink {
   display: inline-flex;
+  background: var(--Button_Primary_Background_Default);
   color: var(--paper);
   font-size: 20px;
   line-height: 32px;
   text-decoration: none;
-  transition: color .2s ease;
+  transition: background-color .2s ease, color .2s ease;
 }
 
 .pressKitLink:hover,
 .pressKitLink:focus-visible {
-  color: var(--green);
+  background: var(--Button_Primary_Background_Hover);
+  color: var(--paper);
+}
+
+.pressKitLink:active {
+  background: var(--Button_Primary_Background_Down);
 }
 
   .socialLinks {
@@ -2370,5 +2394,41 @@
     font-size: 17px;
     line-height: 24px;
     text-align: center;
+  }
+}
+
+/* Freeze the desktop composition at its 1440px reference frame. */
+@media (min-width: 1440px) {
+  .pageShell {
+    --section-padding: 57.6px;
+  }
+
+  .introductionArt {
+    right: -201.6px;
+    left: -201.6px;
+  }
+
+  .introductionCopy {
+    left: 0;
+  }
+
+  .emailLink {
+    font-size: 43.2px;
+  }
+
+  .awards {
+    gap: 40.5px;
+  }
+
+  .indiecadeBadge {
+    width: 112.5px;
+  }
+
+  .wingsBadge {
+    width: 180px;
+  }
+
+  .bitsummitBadge {
+    width: 110.7px;
   }
 }
