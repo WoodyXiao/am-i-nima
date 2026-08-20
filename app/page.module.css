@@ -184,6 +184,31 @@
   object-position: center 41%;
 }
 
+.introductionArtTablet,
+.introductionArtMobile {
+  display: none;
+}
+
+@media (min-width: 403px) and (max-width: 744px) {
+  .introductionArtDesktop {
+    display: none;
+  }
+
+  .introductionArtTablet {
+    display: block;
+  }
+}
+
+@media (max-width: 402px) {
+  .introductionArtDesktop {
+    display: none;
+  }
+
+  .introductionArtMobile {
+    display: block;
+  }
+}
+
 .introductionCopy {
   position: relative;
   display: flex;
@@ -758,10 +783,10 @@
 
   .videoFallback,
   .videoMedia {
-    left: 50%;
-    width: 67.625rem;
-    height: 38.0625rem;
-    transform: translateX(-50%);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
   }
 
   .videoFallbackLabel {
@@ -1917,7 +1942,7 @@
     width: 214.07px;
     height: 61.91px;
     min-height: 61.91px;
-    flex: 0 0 214.07px;
+    flex: 0 0 auto;
     gap: 8.64px;
     padding: 12.9563px 22.4576px;
     font-size: 28.952px;
@@ -2168,9 +2193,9 @@
 
   .studioContent {
     --studio-tablet-logo-width: clamp(
-      131px,
-      calc(16.95906vw + 62.82456px),
-      189px
+      130px,
+      calc(17.54386vw + 59.47368px),
+      190px
     );
     --studio-tablet-gap: clamp(
       19px,
@@ -2224,6 +2249,13 @@
   }
 }
 
+@media (max-width: 402px) {
+  .studioLogo {
+    width: 130px;
+    height: 84px;
+  }
+}
+
 @media (min-width: 600px) and (max-width: 744px) {
   .introduction {
     min-height: 879px;
@@ -2272,8 +2304,27 @@
   }
 
   .studioContent {
+    width: 363px;
+    height: 403px;
+    min-height: 403px;
+    padding: 0;
+    margin-top: 160px;
     margin-right: 0;
     margin-left: auto;
+  }
+
+  .studioLogo {
+    width: 350px;
+    height: 226px;
+  }
+
+  .studioCopy {
+    width: 363px;
+  }
+
+  .studioCopy p {
+    font-size: 18px;
+    font-weight: 500;
   }
 
   .contactSection {
@@ -2430,5 +2481,212 @@
 
   .bitsummitBadge {
     width: 110.7px;
+  }
+}
+
+/* Exact 744px introduction composition for the dedicated tablet artwork. */
+@media (min-width: 403px) and (max-width: 744px) {
+  .introduction {
+    min-height: 863px;
+  }
+
+  .introductionArt {
+    inset: 0;
+    width: 100%;
+    height: 863px;
+    opacity: 1;
+  }
+
+  .introductionArtImage {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .introductionCopy {
+    left: 0;
+    width: clamp(
+      339px,
+      calc(47.07602vw + 149.75439px),
+      500px
+    );
+    padding-top: 0;
+  }
+
+  .gameLogo {
+    width: clamp(
+      314px,
+      calc(54.38596vw + 95.36842px),
+      500px
+    );
+  }
+
+  .releaseDate {
+    display: block;
+    width: 100%;
+    height: 38px;
+    margin: -19px 0 0;
+    color: var(--paper);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: center;
+  }
+
+  .introText {
+    width: clamp(
+      266px,
+      calc(60.52632vw + 22.68421px),
+      473px
+    );
+    min-height: 0;
+    margin-top: 92px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .introCtas {
+    width: 100%;
+    gap: 55px;
+    margin-top: 48px;
+  }
+}
+
+/* Exact mobile artwork composition for the dedicated 402 x 610 image. */
+@media (max-width: 402px) {
+  .introductionArt {
+    inset: 0;
+    width: 100%;
+    height: min(151.7413vw, 610px);
+    opacity: 1;
+  }
+
+  .introductionArtImage {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .introductionCopy {
+    left: 0;
+  }
+}
+
+/* Shared desktop/tablet primary CTA dimensions. */
+@media (min-width: 403px) {
+  .introCtas .steamButtonDemo,
+  .introCtas .steamButtonWishlist {
+    width: 214.07px;
+    height: 61.91px;
+    min-height: 61.91px;
+    flex: 0 0 auto;
+    gap: 8.64px;
+    padding: 12.9563px 22.4576px;
+    font-size: 29px;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .steamButtonBorder {
+    inset: auto;
+    max-width: none;
+  }
+
+  .steamButtonDemo .steamButtonBorder {
+    top: -13.72px;
+    left: -13.30px;
+    width: 234px;
+    height: 84px;
+  }
+
+  .steamButtonWishlist {
+    padding-left: 31px;
+  }
+
+  .steamButtonWishlist .steamButtonBorder {
+    top: -7.14px;
+    left: -13.74px;
+    width: 235px;
+    height: 79px;
+  }
+
+  .introCtas .steamIcon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Fixed mobile CTA frame from the 402px reference. */
+@media (max-width: 402px) {
+  .introCtas .steamButtonDemo,
+  .introCtas .steamButtonWishlist {
+    width: 175.79px;
+    height: 61.88px;
+    min-height: 61.88px;
+    flex: 0 0 61.88px;
+    gap: 6px;
+    padding: 0 14px;
+    font-size: 21.71px;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .steamButtonWishlist {
+    padding-left: 18px;
+  }
+
+  .steamButtonBorder,
+  .steamButtonDemo .steamButtonBorder,
+  .steamButtonWishlist .steamButtonBorder {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+  }
+
+  .introCtas .steamIcon {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+  }
+}
+
+/* Move only the mobile content group upward; keep the artwork untouched. */
+@media (max-width: 402px) {
+  .introduction {
+    height: 610px;
+    min-height: 610px;
+  }
+
+  .introductionCopy {
+    padding-top: 102px;
+    transform: translateY(-180px);
+  }
+
+  .releaseDate {
+    display: block;
+    width: 100%;
+    height: 38px;
+    margin: -19px 0 0;
+    color: var(--paper);
+    font-size: clamp(19px, 5.97015vw, 24px);
+    font-weight: 700;
+    line-height: 38px;
+    text-align: center;
+  }
+
+  .introText {
+    margin-top: 52px;
+  }
+
+  .introCtas {
+    gap: 27px;
+    margin-top: 27px;
+  }
+
+  .introduction::after {
+    display: none;
+  }
+
+  .gallerySection {
+    padding-top: 0;
   }
 }

@@ -12,7 +12,21 @@ export function GameIntroduction() {
           alt=""
           fill
           sizes="100vw"
-          className={styles.introductionArtImage}
+          className={`${styles.introductionArtImage} ${styles.introductionArtDesktop}`}
+        />
+        <Image
+          src={assetPath("/assets/images/nima-key-art-background-tablet.png")}
+          alt=""
+          fill
+          sizes="(max-width: 744px) 100vw, 0px"
+          className={`${styles.introductionArtImage} ${styles.introductionArtTablet}`}
+        />
+        <Image
+          src={assetPath("/assets/images/nima-key-art-background-mobile.png")}
+          alt=""
+          fill
+          sizes="(max-width: 402px) 100vw, 0px"
+          className={`${styles.introductionArtImage} ${styles.introductionArtMobile}`}
         />
       </div>
       <div className={styles.introductionCopy}>
