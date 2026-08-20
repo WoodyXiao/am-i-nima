@@ -2,7 +2,7 @@
   --section-padding: clamp(1.125rem, 4vw, 6rem);
   position: relative;
   overflow: hidden;
-  background: #050706;
+  background: #000000;
 }
 
 .siteHeader {
@@ -2244,6 +2244,11 @@
   .studioSection {
     width: min(1317px, calc(100% - 48px));
     margin-right: auto;
+    margin-left: auto;
+  }
+
+  .studioContent {
+    margin-right: 0;
     margin-left: auto;
   }
 
