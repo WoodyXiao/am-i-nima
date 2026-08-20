@@ -1,6 +1,14 @@
 export type ExternalLink = string | null;
 
 const temporaryLink = "about:blank";
+const steamLink = "https://store.steampowered.com/app/3224600/Am_I_Nima/";
+const discordLink = "https://discord.gg/6Pf5E3GEG";
+const twitterLink = "https://x.com/HO_games_studio";
+const blueskyLink = "https://bsky.app/profile/ho-games-studio.bsky.social";
+const instagramLink = "https://www.instagram.com/ho.games/";
+const tumblrLink = "https://www.tumblr.com/ho-games";
+const tiktokLink = "https://www.tiktok.com/@ho_games_studio";
+const youtubeLink = "https://www.youtube.com/@HO-games-studio";
 
 export const siteContent = {
   title: "Am I Nima?",
@@ -9,8 +17,8 @@ export const siteContent = {
   videoSrc: "/videos/home-video.mp4",
   videoUrl: null as ExternalLink,
   steam: {
-    demoUrl: temporaryLink,
-    wishlistUrl: temporaryLink,
+    demoUrl: steamLink,
+    wishlistUrl: steamLink,
   },
   intro: {
     description:
@@ -25,14 +33,14 @@ export const siteContent = {
     pressKitUrl: temporaryLink,
   },
   socials: [
-    { label: "Steam", url: temporaryLink },
-    { label: "Discord", url: temporaryLink },
-    { label: "YouTube", url: temporaryLink },
-    { label: "Instagram", url: temporaryLink },
-    { label: "Tumblr", url: temporaryLink },
-    { label: "X", url: temporaryLink },
-    { label: "Bluesky", url: temporaryLink },
-    { label: "TikTok", url: temporaryLink },
+    { label: "Steam", url: steamLink },
+    { label: "Discord", url: discordLink },
+    { label: "YouTube", url: youtubeLink },
+    { label: "Instagram", url: instagramLink },
+    { label: "Tumblr", url: tumblrLink },
+    { label: "X", url: twitterLink },
+    { label: "Bluesky", url: blueskyLink },
+    { label: "TikTok", url: tiktokLink },
   ],
   gallery: [
     {
