@@ -57,17 +57,16 @@
   min-height: 2.75rem;
   align-items: center;
   padding: .25rem .5rem;
-  color: #fff;
+  color: var(--Link_Default);
   font-size: 1.25rem;
   font-weight: 700;
   text-decoration: none;
-  opacity: .6;
   transition: opacity .2s ease, color .2s ease;
 }
 
 .wishlistLink:hover,
 .wishlistLink:focus-visible {
-  color: var(--green);
+  color: var(--Link_Hover);
   opacity: 1;
 }
 
@@ -2199,5 +2198,38 @@
 @media (min-width: 600px) and (max-width: 744px) {
   .introduction {
     min-height: 879px;
+  }
+}
+
+/* Footer social logos use the shared link-state color tokens. */
+.socialLink {
+  min-width: 0;
+  min-height: 30px;
+  justify-content: center;
+  color: var(--Link_Default);
+  line-height: 0;
+}
+
+.socialIcon {
+  width: 30px;
+  height: 30px;
+  background: currentColor;
+  -webkit-mask: var(--social-icon) center / contain no-repeat;
+  mask: var(--social-icon) center / contain no-repeat;
+  transition: color .2s ease;
+}
+
+.socialLink:hover .socialIcon,
+.socialLink:focus-visible .socialIcon {
+  color: var(--Link_Hover);
+}
+
+.socialLink:active .socialIcon {
+  color: var(--Link_Down);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .socialIcon {
+    transition: none;
   }
 }

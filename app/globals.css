@@ -3,6 +3,13 @@
   --paper: #e5e7e6;
   --muted: #757b78;
   --green: #22edb0;
+  --Link_Default: #848484;
+  --Link_Hover: #fff;
+  --Link_Down: #1ea68b;
+  --Button_Primary_Background_Default:#000000;
+  --Button_Primary_Background_Hover:#09473B;
+  --Button_Primary_Background_Down:#04211C;
+
 }
 
 * {

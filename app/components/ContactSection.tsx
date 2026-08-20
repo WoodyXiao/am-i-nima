@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { CSSProperties } from "react";
 import styles from "../page.module.css";
 import { assetPath, siteContent } from "../content";
 
@@ -23,7 +24,21 @@ export function ContactSection() {
         />
         <nav className={styles.socialLinks} aria-label="Social links">
           {siteContent.socials.map((social) => (
-            <SafeExternalLink key={social.label} label={social.label} url={social.url} className={styles.socialLink} />
+            <a
+              key={social.label}
+              className={styles.socialLink}
+              href={social.url}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={social.label}
+              title={social.label}
+            >
+              <span
+                aria-hidden="true"
+                className={styles.socialIcon}
+                style={{ "--social-icon": `url("${assetPath(social.icon)}")` } as CSSProperties}
+              />
+            </a>
           ))}
         </nav>
       </div>

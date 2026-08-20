@@ -33,14 +33,14 @@ export const siteContent = {
     pressKitUrl: temporaryLink,
   },
   socials: [
-    { label: "Steam", url: steamLink },
-    { label: "Discord", url: discordLink },
-    { label: "YouTube", url: youtubeLink },
-    { label: "Instagram", url: instagramLink },
-    { label: "Tumblr", url: tumblrLink },
-    { label: "X", url: twitterLink },
-    { label: "Bluesky", url: blueskyLink },
-    { label: "TikTok", url: tiktokLink },
+    { label: "Steam", url: steamLink, icon: "/assets/icons/steam.svg", iconWidth: 79, iconHeight: 80 },
+    { label: "Discord", url: discordLink, icon: "/assets/icons/discord.svg", iconWidth: 110, iconHeight: 80 },
+    { label: "YouTube", url: youtubeLink, icon: "/assets/icons/youtube.svg", iconWidth: 114, iconHeight: 80 },
+    { label: "Instagram", url: instagramLink, icon: "/assets/icons/instagram.svg", iconWidth: 80, iconHeight: 80 },
+    { label: "Tumblr", url: tumblrLink, icon: "/assets/icons/tumblr-icon.svg", iconWidth: 46, iconHeight: 80 },
+    { label: "X", url: twitterLink, icon: "/assets/icons/x.svg", iconWidth: 88, iconHeight: 80 },
+    { label: "Bluesky", url: blueskyLink, icon: "/assets/icons/bluesky.svg", iconWidth: 83, iconHeight: 81 },
+    { label: "TikTok", url: tiktokLink, icon: "/assets/icons/tiktok-logo.svg", iconWidth: 69, iconHeight: 80 },
   ],
   gallery: [
     {
