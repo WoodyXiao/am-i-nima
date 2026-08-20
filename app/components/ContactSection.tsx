@@ -13,9 +13,11 @@ export function ContactSection() {
       <div className={styles.awards} aria-label="Awards and selections">
         <Image src={assetPath("/assets/awards/indiecade-2025.png")} alt="IndieCade 2025 official selection" width={214} height={214} className={styles.indiecadeBadge} />
         <Image src={assetPath("/assets/awards/wings-sxsw-2025-finalist.png")} alt="WINGS at SXSW 2025 finalist" width={330} height={179} className={styles.wingsBadge} />
+        <Image src={assetPath("/assets/awards/BitsummitNomination.png")} alt="BitSummit award nominee" width={123} height={123} className={styles.bitsummitBadge} />
       </div>
       <div className={styles.contactContent}>
         <h2 id="contact-title" className={styles.visuallyHidden}>Contact and social links</h2>
+        <p className={styles.followUs}>Follow us on</p>
         <a className={styles.emailLink} href={`mailto:${siteContent.contact.email}`}>{siteContent.contact.email}</a>
         <SafeExternalLink
           label="Get Press Kit"
