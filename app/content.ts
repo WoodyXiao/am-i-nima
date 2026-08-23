@@ -44,8 +44,8 @@ export const siteContent = {
   ],
   gallery: [
     {
-      src: "/screenshots/nima-screenshot-01.png",
-      alt: "Nima confronts her mother in a dark room in Am I Nima?",
+      src: "/assets/gallery/nima-dialogue-gameplay.png",
+      alt: "Nima builds a dialogue response from connected words while speaking with her mother.",
     },
     {
       src: "/assets/images/nima-main-menu.png",

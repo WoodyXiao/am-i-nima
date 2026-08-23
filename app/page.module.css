@@ -2455,12 +2455,23 @@
     display: block;
     width: 100%;
     color: var(--paper);
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 17px;
+    font-family: var(--font-family-footer-heading);
+    font-size: var(--font-size-footer-label-mobile);
     font-style: normal;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: 0;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-default);
+  }
+
+  .emailLink,
+  .socialLink,
+  .pressKitLink {
+    font-family: var(--font-family-action);
+    font-size: var(--font-size-footer-action);
+    font-style: normal;
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-copy);
+    letter-spacing: var(--letter-spacing-default);
   }
 
   .emailUs {
@@ -2481,12 +2492,6 @@
     background: var(--Button_Primary_Background_Default);
     margin: 16px 0 0;
     color: var(--paper);
-    font-family: "Signika Negative", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.6;
-    letter-spacing: 0;
     white-space: nowrap;
     transition: background-color .2s ease, color .2s ease;
   }
@@ -2517,12 +2522,6 @@
     border: 1px solid var(--paper);
     background: var(--Button_Primary_Background_Default);
     color: var(--paper);
-    font-family: "Signika Negative", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.6;
-    letter-spacing: 0;
     transition: background-color .2s ease, color .2s ease;
   }
 
@@ -2569,12 +2568,6 @@
     border: 1px solid var(--paper);
     margin: 38px 0 0;
     color: var(--paper);
-    font-family: "Signika Negative", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.6;
-    letter-spacing: 0;
   }
 
   .footerScale > .siteFooter {
@@ -2671,20 +2664,20 @@
     grid-area: follow;
     margin: 0;
     color: var(--paper);
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 1;
+    font-family: var(--font-family-footer-heading);
+    font-size: var(--font-size-footer-label);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
   }
 
   .emailLink {
     grid-area: email;
     margin: 0;
     color: var(--paper);
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 1;
+    font-family: var(--font-family-footer-heading);
+    font-size: var(--font-size-footer-email-desktop);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
     white-space: nowrap;
   }
 
@@ -2721,10 +2714,10 @@
     border: 1px solid var(--paper);
     margin: 0;
     color: var(--paper);
-    font-family: "Signika Negative", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.6;
+    font-family: var(--font-family-action);
+    font-size: var(--font-size-footer-action);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-copy);
   }
 
   .awards {
@@ -3143,10 +3136,10 @@
     grid-area: follow;
     margin: 0;
     color: var(--paper);
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 1;
+    font-family: var(--font-family-footer-heading);
+    font-size: var(--font-size-footer-label);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
   }
 
   .emailLink {
@@ -3158,10 +3151,10 @@
     padding: 0;
     border: 0;
     color: var(--paper);
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 1;
+    font-family: var(--font-family-footer-heading);
+    font-size: var(--font-size-footer-email-desktop);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
     white-space: nowrap;
   }
 
@@ -3204,10 +3197,10 @@
     border: 1px solid var(--paper);
     margin: 0;
     color: var(--paper);
-    font-family: "Signika Negative", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.6;
+    font-family: var(--font-family-action);
+    font-size: var(--font-size-footer-action);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-copy);
   }
 
   .awards {
@@ -3297,12 +3290,12 @@
     padding: 0;
     border: 0;
     color: var(--paper);
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 30px;
+    font-family: var(--font-family-footer-heading);
+    font-size: var(--font-size-footer-email-tablet);
     font-style: normal;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: 0;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-default);
     white-space: nowrap;
   }
 
@@ -3340,12 +3333,12 @@
     grid-area: follow;
     margin: 56px 0 0;
     color: var(--paper);
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 24px;
+    font-family: var(--font-family-footer-heading);
+    font-size: var(--font-size-footer-label);
     font-style: normal;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: 0;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-default);
   }
 
   .socialLinks {
@@ -3387,12 +3380,12 @@
     border: 1px solid var(--paper);
     margin: 40px 0 0;
     color: var(--paper);
-    font-family: "Signika Negative", sans-serif;
-    font-size: 16px;
+    font-family: var(--font-family-action);
+    font-size: var(--font-size-footer-action);
     font-style: normal;
-    font-weight: 400;
-    line-height: 1.6;
-    letter-spacing: 0;
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-copy);
+    letter-spacing: var(--letter-spacing-default);
   }
 
   .footerScale > .siteFooter {

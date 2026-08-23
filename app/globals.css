@@ -9,7 +9,19 @@
   --Button_Primary_Background_Default:#000000;
   --Button_Primary_Background_Hover:#09473B;
   --Button_Primary_Background_Down:#04211C;
-
+  --font-family-body: "Signika Negative", system-ui, sans-serif;
+  --font-family-action: "Signika Negative", sans-serif;
+  --font-family-footer-heading: Helvetica, Arial, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-size-footer-action: 16px;
+  --font-size-footer-label-mobile: 17px;
+  --font-size-footer-label: 24px;
+  --font-size-footer-email-tablet: 30px;
+  --font-size-footer-email-desktop: 40px;
+  --line-height-tight: 1;
+  --line-height-copy: 1.6;
+  --letter-spacing-default: 0;
 }
 
 * {
@@ -26,7 +38,7 @@ body {
   min-width: 320px;
   background: var(--ink);
   color: var(--paper);
-  font-family: "Signika Negative", system-ui, sans-serif;
+  font-family: var(--font-family-body);
   text-rendering: optimizeLegibility;
 }
 
