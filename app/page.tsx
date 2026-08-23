@@ -15,8 +15,10 @@ export default function HomePage() {
       <GameIntroduction />
       <ScreenshotGallery />
       <StudioSection />
-      <ContactSection />
-      <SiteFooter />
+      <footer>
+        <ContactSection />
+        <SiteFooter />
+      </footer>
     </main>
   );
 }

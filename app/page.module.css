@@ -2164,6 +2164,10 @@
   .studioSection {
     margin-bottom: var(--section-bridge-space);
   }
+
+  .studioSection {
+    margin-bottom: calc(var(--section-bridge-space) / 2);
+  }
 }
 
 /* At the tablet reference, the space above the carousel belongs to the
@@ -2332,7 +2336,7 @@
     width: min(1317px, calc(100% - 48px));
     height: 426px;
     grid-template-columns: 57.5% 42.5%;
-    grid-template-rows: 55px 85px 53px;
+    grid-template-rows: 40px 70px 43px;
     grid-template-areas:
       "follow email"
       "social awards"
@@ -2353,18 +2357,20 @@
     grid-area: follow;
     margin: 0;
     color: var(--paper);
-    font-size: 30px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 24px;
     font-weight: 700;
-    line-height: 38px;
+    line-height: 1;
   }
 
   .emailLink {
     grid-area: email;
     margin: 0;
     color: var(--paper);
-    font-size: clamp(30px, 3vw, 48px);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 40px;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1;
     white-space: nowrap;
   }
 
@@ -2372,7 +2378,7 @@
     display: flex;
     grid-area: social;
     align-items: flex-start;
-    gap: 40px;
+    gap: 28px;
     margin: 0;
   }
 
@@ -2393,16 +2399,18 @@
 
   .pressKitLink {
     display: inline-flex;
-    width: 168px;
-    height: 53px;
+    width: 137px;
+    height: 43px;
     grid-area: press;
     align-items: center;
     justify-content: center;
     border: 1px solid var(--paper);
     margin: 0;
     color: var(--paper);
-    font-size: 20px;
-    line-height: 32px;
+    font-family: "Signika Negative", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
   }
 
   .awards {
@@ -2413,31 +2421,32 @@
     justify-content: flex-end;
     gap: clamp(24px, 2.8125vw, 45px);
     min-width: 0;
-    margin: 40px 0 0;
+    margin: 25px 0 0;
     padding-right: 16px;
   }
 
   .indiecadeBadge {
-    width: clamp(90px, 7.8125vw, 125px);
-    height: auto;
+    width: 122px;
+    height: 114px;
   }
 
   .wingsBadge {
-    width: clamp(145px, 12.5vw, 200px);
-    height: auto;
+    width: 172px;
+    height: 93px;
   }
 
   .bitsummitBadge {
     display: block;
-    width: clamp(90px, 7.6875vw, 123px);
-    height: auto;
+    width: 105px;
+    height: 105px;
     object-fit: contain;
   }
 
   .siteFooter {
+    position: relative;
     width: min(1317px, calc(100% - 48px));
     height: 118px;
-    border-top: 1px solid var(--Link_Default);
+    border-top: 0;
     margin-right: auto;
     margin-left: auto;
     padding: 28px 0 0;
@@ -2445,6 +2454,15 @@
     font-size: 17px;
     line-height: 24px;
     text-align: center;
+  }
+
+  .siteFooter::before {
+    position: absolute;
+    top: 0;
+    right: 39px;
+    left: 23px;
+    border-top: 1px solid var(--Link_Default);
+    content: "";
   }
 }
 
@@ -2463,24 +2481,23 @@
     left: 0;
   }
 
-  .emailLink {
-    font-size: 43.2px;
-  }
-
   .awards {
     gap: 40.5px;
   }
 
   .indiecadeBadge {
-    width: 112.5px;
+    width: 122px;
+    height: 114px;
   }
 
   .wingsBadge {
-    width: 180px;
+    width: 172px;
+    height: 93px;
   }
 
   .bitsummitBadge {
-    width: 110.7px;
+    width: 105px;
+    height: 105px;
   }
 }
 
@@ -2688,5 +2705,65 @@
 
   .gallerySection {
     padding-top: 0;
+  }
+}
+
+/* Exact footer-to-page-bottom spacing for the three reference layouts. */
+.siteFooter {
+  height: auto;
+  min-height: 0;
+}
+
+@media (min-width: 745px) {
+  .siteFooter {
+    padding-bottom: 36px;
+  }
+}
+
+@media (min-width: 403px) and (max-width: 744px) {
+  .siteFooter {
+    padding-bottom: 11px;
+  }
+}
+
+@media (max-width: 402px) {
+  .siteFooter {
+    padding-bottom: 27px;
+  }
+}
+
+footer > .contactSection {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding-top: 0;
+}
+
+.pageShell > footer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background: #000;
+}
+
+.pageShell > footer > .siteFooter {
+  flex: 0 0 auto;
+  margin-top: 0;
+}
+
+@media (min-width: 745px) {
+  .pageShell > footer {
+    height: 400px;
+  }
+}
+
+@media (min-width: 403px) and (max-width: 744px) {
+  .pageShell > footer {
+    height: 550px;
+  }
+}
+
+@media (max-width: 402px) {
+  .pageShell > footer {
+    height: 950px;
   }
 }
