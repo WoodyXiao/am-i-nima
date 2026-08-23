@@ -152,8 +152,6 @@
 
 .introduction {
   position: relative;
-  min-height: 39rem;
-  margin-top: -9rem;
   isolation: isolate;
 }
 
@@ -332,7 +330,6 @@
   position: relative;
   z-index: 1;
   padding: 4rem 0 7rem;
-  background: #050706;
 }
 
 .galleryCarousel {
@@ -573,131 +570,12 @@
   line-height: 1.6;
 }
 
-.contactSection {
-  display: grid;
-  width: min(100% - 2rem, 68rem);
-  grid-template-columns: minmax(14rem, 1fr) minmax(26rem, 1.3fr);
-  align-items: center;
-  gap: 3rem;
-  margin: 0 auto;
-  padding: 7rem 0 5rem;
-}
-
-.awards {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.indiecadeBadge {
-  width: min(13.4rem, 38%);
-  height: auto;
-}
-
-.wingsBadge {
-  width: min(20.6rem, 58%);
-  height: auto;
-}
-
-.bitsummitBadge,
-.followUs {
-  display: none;
-}
-
-.contactContent {
-  min-width: 0;
-}
-
 .contactPrompt,
 .socialPrompt {
   margin: 0;
   color: #fff;
   font-size: 1.25rem;
   line-height: 1.6;
-}
-
-.emailLink {
-  display: inline-block;
-  margin: .25rem 0 2.5rem;
-  color: var(--paper);
-  font-size: clamp(1.5rem, 3.3vw, 2.5rem);
-  font-weight: 700;
-  text-decoration: none;
-  overflow-wrap: anywhere;
-  transition: color .2s ease;
-}
-
-.emailLink:hover,
-.emailLink:focus-visible {
-  color: var(--Link_Hover);
-}
-
-.emailLink:active {
-  color: var(--Link_Down);
-}
-
-.pressKitLink {
-  display: inline-flex;
-  background: var(--Button_Primary_Background_Default);
-  color: var(--paper);
-  font-size: 20px;
-  line-height: 32px;
-  text-decoration: none;
-  transition: background-color .2s ease, color .2s ease;
-}
-
-.pressKitLink:hover,
-.pressKitLink:focus-visible {
-  background: var(--Button_Primary_Background_Hover);
-  color: var(--paper);
-}
-
-.pressKitLink:active {
-  background: var(--Button_Primary_Background_Down);
-}
-
-  .socialLinks {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-areas:
-      "steam discord x bluesky"
-      "instagram tumblr tiktok youtube";
-    gap: .35rem 2rem;
-    margin-top: .5rem;
-  }
-
-  .socialLink:nth-child(1) { grid-area: steam; }
-  .socialLink:nth-child(2) { grid-area: discord; }
-  .socialLink:nth-child(3) { grid-area: youtube; }
-  .socialLink:nth-child(4) { grid-area: instagram; }
-  .socialLink:nth-child(5) { grid-area: tumblr; }
-  .socialLink:nth-child(6) { grid-area: x; }
-  .socialLink:nth-child(7) { grid-area: bluesky; }
-  .socialLink:nth-child(8) { grid-area: tiktok; }
-
-.socialLink {
-  display: inline-flex;
-  min-height: 2.25rem;
-  align-items: center;
-  color: var(--muted);
-  font-size: 1.25rem;
-  line-height: 1.6;
-  text-decoration: none;
-  transition: color .2s ease;
-}
-
-.socialLink:hover,
-.socialLink:focus-visible {
-  color: #fff;
-}
-
-.siteFooter {
-  padding: 0 1rem 3rem;
-  color: var(--paper);
-  font-size: .9375rem;
-  line-height: 1.6;
-  text-align: center;
 }
 
 .visuallyHidden {
@@ -776,21 +654,6 @@
 
   .studioCopy p {
     font-size: 1.125rem;
-  }
-
-  .contactSection {
-    width: min(100% - 2rem, 43.5rem);
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    padding-top: 4rem;
-  }
-
-  .awards {
-    justify-content: flex-start;
-  }
-
-  .socialLinks {
-    max-width: 42rem;
   }
 }
 
@@ -931,101 +794,22 @@
     line-height: 1.6;
   }
 
-  .contactSection {
-    display: flex;
-    width: calc(100% - 4rem);
-    flex-direction: column;
-    gap: 3rem;
-    align-items: stretch;
-    padding: 4rem 0 3rem;
-  }
-
-  .awards {
-    justify-content: space-between;
-    gap: 1rem;
-  }
-
-  .indiecadeBadge {
-    width: 31%;
-  }
-
-  .wingsBadge {
-    width: 58%;
-  }
-
   .contactPrompt,
   .socialPrompt {
     font-size: 1.25rem;
   }
-
-  .emailLink {
-    display: flex;
-    min-height: 2.7rem;
-    align-items: center;
-    justify-content: center;
-    margin: .75rem 0 3rem;
-    padding: .35rem .75rem;
-    border: 1px solid #fff;
-    font-size: .95rem;
-    font-weight: 400;
-    white-space: nowrap;
-  }
-
-  .socialLinks {
-    display: flex;
-    flex-direction: column;
-    gap: .625rem;
-    margin-top: .75rem;
-  }
-
-  .socialLink {
-    min-height: 2.7rem;
-    justify-content: center;
-    border: 1px solid #fff;
-    color: #fff;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  .siteFooter {
-    padding-bottom: 2rem;
-    font-size: .9375rem;
-  }
 }
 
 @media (min-width: 1024px) {
-  .introduction {
-    min-height: 39rem;
-    margin-top: -13rem;
-  }
-
-  .introductionCopy {
-    width: min(100% - 4rem, 31rem);
-    padding-top: 4rem;
-  }
-
-  .introText {
-    margin-top: -1.5rem;
-  }
-
   .gallerySection {
     padding-top: 3rem;
-  }
-
-  .studioSection {
-    min-height: 22rem;
-  }
-
-  .studioContent {
-    min-height: 22rem;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .headerLogoLink,
-  .wishlistLink,
-  .steamButton,
-  .socialLink {
+.wishlistLink,
+.steamButton {
     transition: none;
   }
 
@@ -1038,7 +822,6 @@
   }
 
   .introduction {
-    min-height: 900px;
     margin-top: 0;
   }
 
@@ -1126,60 +909,8 @@
     display: none;
   }
 
-  .studioSection {
-    min-height: 1049px;
-  }
-
-  .studioBackdrop {
-    top: 34px;
-    bottom: auto;
-    height: 913px;
-  }
-
   .studioContent {
-    width: 753px;
     grid-template-columns: 349px 361px;
-    align-items: start;
-    gap: 43px;
-    min-height: 1049px;
-    padding: 63px 0 0;
-    margin-left: calc(22.22% - 9px);
-    margin-right: 0;
-  }
-
-  .studioLogo {
-    width: 349px;
-    justify-self: start;
-  }
-
-  .studioCopy {
-    width: 361px;
-    margin-top: 32px;
-  }
-
-  .contactSection {
-    width: calc(100% - 154px);
-    grid-template-columns: 633px minmax(0, 1fr);
-    align-items: start;
-    gap: 20px;
-    padding: 0 0 66px;
-  }
-
-  .awards {
-    justify-content: flex-start;
-    gap: 20px;
-  }
-
-  .indiecadeBadge {
-    width: 214px;
-  }
-
-  .wingsBadge {
-    width: 330px;
-  }
-
-  .contactContent {
-    margin-top: 0;
   }
 
   .contactPrompt {
@@ -1190,29 +921,6 @@
     display: none;
   }
 
-  .emailLink {
-    margin: 0 0 25px;
-  }
-
-  .pressKitLink {
-    margin-top: -17px;
-    margin-bottom: 8px;
-  }
-
-  .socialLinks {
-    margin-top: 0;
-  }
-
-  .socialLink {
-    min-height: 24px;
-    font-size: 15px;
-    line-height: 24px;
-  }
-
-  .siteFooter {
-    height: 48px;
-    padding: 0;
-  }
 }
 
 @media (min-width: 600px) and (max-width: 1023px) {
@@ -1222,7 +930,6 @@
   }
 
   .introduction {
-    min-height: 739px;
     margin-top: -201px;
   }
 
@@ -1341,61 +1048,8 @@
     margin-top: 0;
   }
 
-  .contactSection {
-    width: 582px;
-    grid-template-columns: 1fr;
-    gap: 0;
-    padding: 45px 0 26px;
-    margin-left: 81px;
-    margin-right: 0;
-  }
-
-  .awards {
-    justify-content: flex-start;
-    gap: 37px;
-  }
-
-  .indiecadeBadge {
-    width: 214px;
-  }
-
-  .wingsBadge {
-    width: 330px;
-  }
-
-  .contactContent {
-    margin-top: 62px;
-  }
-
-  .socialLinks {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0 50px;
-    margin-top: 20px;
-  }
-
-  .socialLink {
-    min-height: 32px;
-    color: var(--muted);
-    font-family: "Signika Negative", system-ui, sans-serif;
-    font-size: 20px;
-  }
-
   .contactPrompt {
     display: none;
-  }
-
-  .emailLink {
-    margin: 0 0 25px;
-  }
-
-  .contactSection {
-    padding-bottom: 62px;
-  }
-
-  .siteFooter {
-    height: 50px;
-    padding: 7px 16px 0;
   }
 }
 
@@ -1406,7 +1060,6 @@
   }
 
   .introduction {
-    min-height: 726px;
     margin-top: -222px;
   }
 
@@ -1458,7 +1111,6 @@
   }
 
   .galleryStage {
-    height: 206px;
     min-height: 0;
     align-items: flex-start;
     justify-content: flex-start;
@@ -1518,7 +1170,6 @@
   }
 
   .studioBackdrop {
-    height: 832px;
     opacity: .55;
   }
 
@@ -1547,58 +1198,12 @@
     font-size: 15px;
   }
 
-  .contactSection {
-    position: relative;
-    display: flex;
-    width: calc(100vw - 65px);
-    flex-direction: column;
-    gap: 0;
-    align-items: stretch;
-    margin-top: -462px;
-    margin-left: 33px;
-    margin-right: 0;
-    padding: 0 0 0;
-  }
-
-  .awards {
-    height: 113px;
-    justify-content: space-between;
-    gap: 10px;
-  }
-
-  .indiecadeBadge {
-    width: 113.45px;
-  }
-
-  .wingsBadge {
-    width: 175.07px;
-  }
-
-  .contactContent {
-    margin-top: 61px;
-  }
-
   .contactPrompt,
   .socialPrompt {
     display: block;
     font-size: 20px;
   }
 
-  .emailLink {
-    width: 100%;
-    margin: 5px 0 61px;
-    font-size: 16px;
-  }
-
-  .socialLinks {
-    margin-top: 5px;
-  }
-
-  .siteFooter {
-    height: 85px;
-    padding: 29px 16px 0;
-    font-size: 15px;
-  }
 }
 
 /* Keep the tablet composition fluid before the phone breakpoint. This avoids
@@ -1650,7 +1255,6 @@
    browser still needs a stable layout while it is being resized between them. */
 @media (min-width: 768px) and (max-width: 1023px) {
   .introduction {
-    min-height: calc(62.890625vw + 256px);
     margin-top: calc(78.515625vw - 804px);
   }
 
@@ -1738,10 +1342,6 @@
 }
 
 @media (min-width: 1024px) {
-  .introduction {
-    min-height: 1098px;
-  }
-
   .introductionArt {
     top: 77px;
   }
@@ -1777,25 +1377,7 @@
   }
 
   .studioBackdrop {
-    top: 34px;
-    right: auto;
-    left: 50%;
-    width: 1544px;
-    height: 913px;
     min-height: 0;
-    transform: translateX(-50%);
-  }
-
-  .siteFooter {
-    width: 165px;
-    height: 24px;
-    margin-top: 1px;
-    margin-right: calc(22px - (100vw - 100%));
-    margin-left: auto;
-    padding: 0;
-    font-size: 15px;
-    line-height: 24px;
-    text-align: left;
   }
 }
 
@@ -1815,17 +1397,6 @@
     height: 913px;
     min-height: 0;
   }
-
-  .siteFooter {
-    width: 165px;
-    height: 24px;
-    margin-right: calc(49px - (100vw - 100%));
-    margin-left: auto;
-    padding: 0;
-    font-size: 15px;
-    line-height: 24px;
-    text-align: left;
-  }
 }
 
 @media (min-width: 600px) and (max-width: 767px) {
@@ -1844,17 +1415,6 @@
     height: 913px;
     min-height: 0;
   }
-
-  .siteFooter {
-    width: 165px;
-    height: 24px;
-    margin-right: calc(49px - (100vw - 100%));
-    margin-left: auto;
-    padding: 0;
-    font-size: 15px;
-    line-height: 24px;
-    text-align: left;
-  }
 }
 
 @media (max-width: 599px) {
@@ -1872,19 +1432,6 @@
     top: 0;
     height: 832px;
     min-height: 0;
-  }
-
-  .siteFooter {
-    width: 165px;
-    height: 53px;
-    position: relative;
-    left: calc((100vw - 100%) / 2);
-    margin-right: auto;
-    margin-left: auto;
-    padding: 29px 0 0;
-    font-size: 15px;
-    line-height: 24px;
-    text-align: center;
   }
 }
 
@@ -2052,25 +1599,16 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 361px;
-    height: 687px;
-    min-height: 687px;
     gap: 0;
-    padding: 160px 0 0;
-    margin-left: calc(100% - 572px);
-    margin-right: 0;
   }
 
   .studioLogo {
     flex: 0 0 auto;
-    width: 349px;
-    height: auto;
     justify-self: auto;
   }
 
   .studioCopy {
     flex: 0 0 auto;
-    width: 361px;
     margin-top: 32px;
   }
 }
@@ -2210,7 +1748,6 @@
    intended background instead of exposing a detached black margin. */
 @media (min-width: 403px) and (max-width: 744px) {
   .introduction {
-    min-height: 866px;
     overflow: hidden;
   }
 
@@ -2274,24 +1811,6 @@
     margin: 0;
     transform: none;
   }
-
-  .contactSection {
-    display: grid;
-    width: clamp(326px, calc(74.8538vw + 25.08772px), 582px);
-    grid-template-columns: 1fr;
-    gap: 0;
-    padding-top: 0;
-    margin-top: 0;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-@media (max-width: 402px) {
-  .studioLogo {
-    width: 130px;
-    height: 84px;
-  }
 }
 
 @media (min-width: 600px) and (max-width: 744px) {
@@ -2301,32 +1820,6 @@
 }
 
 /* Footer social logos use the shared link-state color tokens. */
-.socialLink {
-  min-width: 0;
-  min-height: 30px;
-  justify-content: center;
-  color: var(--Link_Default);
-  line-height: 0;
-}
-
-.socialIcon {
-  width: 30px;
-  height: 30px;
-  background: currentColor;
-  -webkit-mask: var(--social-icon) center / contain no-repeat;
-  mask: var(--social-icon) center / contain no-repeat;
-  transition: color .2s ease;
-}
-
-.socialLabel,
-.emailUs {
-  display: none;
-}
-
-.socialLink:hover .socialIcon,
-.socialLink:focus-visible .socialIcon {
-  color: var(--Link_Hover);
-}
 
 /* Exact 402px mobile studio/footer composition. */
 @media (max-width: 402px) {
@@ -2391,226 +1884,6 @@
     font-size: 15px;
     line-height: 1.6;
   }
-
-  .footerViewport {
-    position: relative;
-    z-index: 1;
-    display: block;
-    width: 100%;
-    height: 871px;
-    background: transparent;
-  }
-
-  .footerScale {
-    display: flex;
-    width: 100%;
-    height: 871px;
-    flex-direction: column;
-  }
-
-  .footerScale > .contactSection {
-    position: relative;
-    display: flex;
-    width: min(306px, calc(100% - 64px));
-    height: auto;
-    min-height: 0;
-    flex: 0 0 auto;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    padding: 0;
-    margin: 0 auto;
-  }
-
-  .awards {
-    display: flex;
-    width: 100%;
-    height: 74px;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0;
-    padding: 0;
-    margin: 0;
-  }
-
-  .indiecadeBadge {
-    width: 79px;
-    height: 74px;
-  }
-
-  .wingsBadge {
-    width: 112px;
-    height: 61px;
-  }
-
-  .bitsummitBadge {
-    display: block;
-    width: 68px;
-    height: 68px;
-    object-fit: contain;
-  }
-
-  .contactContent {
-    display: flex;
-    min-width: 0;
-    flex-direction: column;
-    margin: 0;
-  }
-
-  .emailUs,
-  .followUs {
-    display: block;
-    width: 100%;
-    color: var(--paper);
-    font-family: var(--font-family-footer-heading);
-    font-size: var(--font-size-footer-label-mobile);
-    font-style: normal;
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-tight);
-    letter-spacing: var(--letter-spacing-default);
-  }
-
-  .emailLink,
-  .socialLink,
-  .pressKitLink {
-    font-family: var(--font-family-action);
-    font-size: var(--font-size-footer-action);
-    font-style: normal;
-    font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-copy);
-    letter-spacing: var(--letter-spacing-default);
-  }
-
-  .emailUs {
-    order: 1;
-    margin: 31px 0 0;
-  }
-
-  .emailLink {
-    display: flex;
-    width: 100%;
-    height: 43px;
-    min-height: 43px;
-    order: 2;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    border: 1px solid var(--paper);
-    background: var(--Button_Primary_Background_Default);
-    margin: 16px 0 0;
-    color: var(--paper);
-    white-space: nowrap;
-    transition: background-color .2s ease, color .2s ease;
-  }
-
-  .followUs {
-    order: 3;
-    margin: 45px 0 0;
-  }
-
-  .socialLinks {
-    display: flex;
-    width: 100%;
-    order: 4;
-    flex-direction: column;
-    gap: 17px;
-    margin: 13px 0 0;
-  }
-
-  .socialLink {
-    display: flex;
-    width: 100%;
-    height: 43px;
-    min-height: 43px;
-    flex: 0 0 43px;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    border: 1px solid var(--paper);
-    background: var(--Button_Primary_Background_Default);
-    color: var(--paper);
-    transition: background-color .2s ease, color .2s ease;
-  }
-
-  .emailLink:hover,
-  .emailLink:focus-visible,
-  .socialLink:hover,
-  .socialLink:focus-visible {
-    background: var(--Button_Primary_Background_Hover);
-    color: var(--paper);
-  }
-
-  .emailLink:active,
-  .socialLink:active {
-    background: var(--Button_Primary_Background_Down);
-    color: var(--paper);
-  }
-
-  .socialLink:nth-child(1) { order: 1; }
-  .socialLink:nth-child(3) { order: 2; }
-  .socialLink:nth-child(4) { order: 3; }
-  .socialLink:nth-child(6) { order: 4; }
-  .socialLink:nth-child(8) { order: 5; }
-  .socialLink:nth-child(2) { order: 6; }
-  .socialLink:nth-child(5) { order: 7; }
-  .socialLink:nth-child(7) { order: 8; }
-
-  .socialIcon {
-    display: none;
-  }
-
-  .socialLabel {
-    display: inline;
-  }
-
-  .pressKitLink {
-    display: flex;
-    width: 100%;
-    height: 43px;
-    min-height: 43px;
-    order: 5;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    border: 1px solid var(--paper);
-    margin: 38px 0 0;
-    color: var(--paper);
-  }
-
-  .footerScale > .siteFooter {
-    position: relative;
-    left: 0;
-    width: min(306px, calc(100% - 64px));
-    height: 44px;
-    min-height: 44px;
-    flex: 0 0 44px;
-    border-top: 0;
-    margin: 27px auto 0;
-    padding: 20px 0 0;
-    color: var(--Link_Default);
-    font-size: 15px;
-    line-height: 24px;
-    text-align: center;
-  }
-
-  .siteFooter::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    border-top: 1px solid var(--Link_Default);
-    content: "";
-  }
-}
-
-.socialLink:active .socialIcon {
-  color: var(--Link_Down);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .socialIcon {
-    transition: none;
-  }
 }
 
 /* Revised 1600px desktop footer composition. */
@@ -2644,140 +1917,6 @@
     font-size: 18px;
     font-weight: 500;
   }
-
-  .contactSection {
-    display: grid;
-    width: min(1317px, calc(100% - 48px));
-    height: 426px;
-    grid-template-columns: 57.5% 42.5%;
-    grid-template-rows: 40px 70px 43px;
-    grid-template-areas:
-      "follow email"
-      "social awards"
-      "press awards";
-    gap: 0;
-    align-items: start;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 70px 23px 0;
-  }
-
-  .contactContent {
-    display: contents;
-  }
-
-  .followUs {
-    display: block;
-    grid-area: follow;
-    margin: 0;
-    color: var(--paper);
-    font-family: var(--font-family-footer-heading);
-    font-size: var(--font-size-footer-label);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-tight);
-  }
-
-  .emailLink {
-    grid-area: email;
-    margin: 0;
-    color: var(--paper);
-    font-family: var(--font-family-footer-heading);
-    font-size: var(--font-size-footer-email-desktop);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-tight);
-    white-space: nowrap;
-  }
-
-  .socialLinks {
-    display: flex;
-    grid-area: social;
-    align-items: flex-start;
-    gap: 28px;
-    margin: 0;
-  }
-
-  .socialLink {
-    flex: 0 0 30px;
-    width: 30px;
-    min-height: 30px;
-  }
-
-  .socialLink:nth-child(1) { order: 1; }
-  .socialLink:nth-child(3) { order: 2; }
-  .socialLink:nth-child(4) { order: 3; }
-  .socialLink:nth-child(6) { order: 4; }
-  .socialLink:nth-child(8) { order: 5; }
-  .socialLink:nth-child(2) { order: 6; }
-  .socialLink:nth-child(5) { order: 7; }
-  .socialLink:nth-child(7) { order: 8; }
-
-  .pressKitLink {
-    display: inline-flex;
-    width: 137px;
-    height: 43px;
-    grid-area: press;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--paper);
-    margin: 0;
-    color: var(--paper);
-    font-family: var(--font-family-action);
-    font-size: var(--font-size-footer-action);
-    font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-copy);
-  }
-
-  .awards {
-    display: flex;
-    height: 123px;
-    grid-area: awards;
-    align-items: center;
-    justify-content: flex-end;
-    gap: clamp(24px, 2.8125vw, 45px);
-    min-width: 0;
-    margin: 25px 0 0;
-    padding-right: 16px;
-  }
-
-  .indiecadeBadge {
-    width: 122px;
-    height: 114px;
-  }
-
-  .wingsBadge {
-    width: 172px;
-    height: 93px;
-  }
-
-  .bitsummitBadge {
-    display: block;
-    width: 105px;
-    height: 105px;
-    object-fit: contain;
-  }
-
-  .siteFooter {
-    position: relative;
-    width: min(1317px, calc(100% - 48px));
-    height: 118px;
-    border-top: 0;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 28px 0 0;
-    color: var(--Link_Default);
-    font-size: 17px;
-    line-height: 24px;
-    text-align: center;
-  }
-
-  .siteFooter::before {
-    position: absolute;
-    top: 0;
-    right: 39px;
-    left: 23px;
-    border-top: 1px solid var(--Link_Default);
-    content: "";
-  }
 }
 
 /* Freeze the desktop composition at its 1440px reference frame. */
@@ -2793,25 +1932,6 @@
 
   .introductionCopy {
     left: 0;
-  }
-
-  .awards {
-    gap: 40.5px;
-  }
-
-  .indiecadeBadge {
-    width: 122px;
-    height: 114px;
-  }
-
-  .wingsBadge {
-    width: 172px;
-    height: 93px;
-  }
-
-  .bitsummitBadge {
-    width: 105px;
-    height: 105px;
   }
 }
 
@@ -3023,419 +2143,9 @@
 }
 
 /* Exact footer-to-page-bottom spacing for the three reference layouts. */
-.siteFooter {
-  height: auto;
-  min-height: 0;
-}
-
-@media (min-width: 745px) {
-  .siteFooter {
-    padding-bottom: 36px;
-  }
-}
-
-@media (min-width: 403px) and (max-width: 744px) {
-  .siteFooter {
-    padding-bottom: 11px;
-  }
-}
-
-@media (max-width: 402px) {
-  .siteFooter {
-    padding-bottom: 27px;
-  }
-}
-
-.footerScale > .contactSection {
-  flex: 1 1 auto;
-  min-height: 0;
-  padding-top: 0;
-}
-
-.footerViewport {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  background: #000;
-}
-
-.footerScale {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-}
-
-.footerScale > .siteFooter {
-  flex: 0 0 auto;
-  margin-top: 0;
-}
-
-@media (min-width: 745px) {
-  .footerViewport {
-    position: relative;
-    display: block;
-    height: var(--footer-height, 400px);
-    overflow: hidden;
-  }
-
-  .footerScale {
-    position: absolute;
-    top: 0;
-    left: var(--footer-offset, 0);
-    width: 1440px;
-    height: 400px;
-    transform: scale(var(--footer-scale, 1));
-    transform-origin: top left;
-  }
-}
-
-@media (min-width: 403px) and (max-width: 744px) {
-  .footerViewport {
-    position: relative;
-    display: block;
-    height: var(--footer-height, 488px);
-    overflow: hidden;
-  }
-
-  .footerScale {
-    position: absolute;
-    top: 0;
-    left: var(--footer-offset, 0);
-    width: 744px;
-    height: 488px;
-    transform: scale(var(--footer-scale, 1));
-    transform-origin: top left;
-  }
-}
-
-@media (max-width: 402px) {
-  .footerViewport {
-    height: 950px;
-  }
-}
 
 /* Keep the 1440px footer composition intact while scaling toward tablet. */
-@media (min-width: 745px) and (max-width: 1023px) {
-  .contactSection {
-    display: grid;
-    width: 1317px;
-    height: 426px;
-    grid-template-columns: 57.5% 42.5%;
-    grid-template-rows: 40px 70px 43px;
-    grid-template-areas:
-      "follow email"
-      "social awards"
-      "press awards";
-    gap: 0;
-    align-items: start;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 70px 23px 0;
-  }
-
-  .contactContent {
-    display: contents;
-  }
-
-  .followUs {
-    display: block;
-    grid-area: follow;
-    margin: 0;
-    color: var(--paper);
-    font-family: var(--font-family-footer-heading);
-    font-size: var(--font-size-footer-label);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-tight);
-  }
-
-  .emailLink {
-    display: block;
-    width: max-content;
-    min-height: 0;
-    grid-area: email;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    color: var(--paper);
-    font-family: var(--font-family-footer-heading);
-    font-size: var(--font-size-footer-email-desktop);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-tight);
-    white-space: nowrap;
-  }
-
-  .socialLinks {
-    display: flex;
-    width: max-content;
-    grid-area: social;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 28px;
-    margin: 0;
-  }
-
-  .socialLink {
-    flex: 0 0 30px;
-    width: 30px;
-    height: 30px;
-    min-height: 30px;
-    padding: 0;
-    border: 0;
-    color: var(--Link_Default);
-  }
-
-  .socialLink:nth-child(1) { order: 1; }
-  .socialLink:nth-child(3) { order: 2; }
-  .socialLink:nth-child(4) { order: 3; }
-  .socialLink:nth-child(6) { order: 4; }
-  .socialLink:nth-child(8) { order: 5; }
-  .socialLink:nth-child(2) { order: 6; }
-  .socialLink:nth-child(5) { order: 7; }
-  .socialLink:nth-child(7) { order: 8; }
-
-  .pressKitLink {
-    display: inline-flex;
-    width: 137px;
-    height: 43px;
-    grid-area: press;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--paper);
-    margin: 0;
-    color: var(--paper);
-    font-family: var(--font-family-action);
-    font-size: var(--font-size-footer-action);
-    font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-copy);
-  }
-
-  .awards {
-    display: flex;
-    height: 123px;
-    grid-area: awards;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 40.5px;
-    min-width: 0;
-    margin: 25px 0 0;
-    padding-right: 16px;
-  }
-
-  .indiecadeBadge {
-    width: 122px;
-    height: 114px;
-  }
-
-  .wingsBadge {
-    width: 172px;
-    height: 93px;
-  }
-
-  .bitsummitBadge {
-    display: block;
-    width: 105px;
-    height: 105px;
-    object-fit: contain;
-  }
-
-  .siteFooter {
-    position: relative;
-    width: 1317px;
-    height: auto;
-    min-height: 0;
-    border-top: 0;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 28px 0 36px;
-    color: var(--Link_Default);
-    font-size: 17px;
-    line-height: 24px;
-    text-align: center;
-  }
-
-  .siteFooter::before {
-    position: absolute;
-    top: 0;
-    right: 39px;
-    left: 23px;
-    border-top: 1px solid var(--Link_Default);
-    content: "";
-  }
-}
 
 /* Exact tablet footer composition. */
-@media (min-width: 403px) and (max-width: 744px) {
-  .footerScale > .contactSection {
-    display: grid;
-    width: calc(100% - 170px);
-    height: auto;
-    flex: 0 0 auto;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "email"
-      "awards"
-      "follow"
-      "social"
-      "press";
-    gap: 0;
-    align-items: start;
-    margin: 0 auto;
-    padding: 0;
-  }
-
-  .contactContent {
-    display: contents;
-  }
-
-  .emailLink {
-    display: block;
-    width: max-content;
-    min-height: 0;
-    grid-area: email;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    color: var(--paper);
-    font-family: var(--font-family-footer-heading);
-    font-size: var(--font-size-footer-email-tablet);
-    font-style: normal;
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-tight);
-    letter-spacing: var(--letter-spacing-default);
-    white-space: nowrap;
-  }
-
-  .awards {
-    display: flex;
-    width: 100%;
-    height: 114px;
-    grid-area: awards;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 28px;
-    margin: 25px 0 0;
-    padding: 0;
-  }
-
-  .indiecadeBadge {
-    width: 122px;
-    height: 114px;
-  }
-
-  .wingsBadge {
-    width: 172px;
-    height: 93px;
-  }
-
-  .bitsummitBadge {
-    display: block;
-    width: 105px;
-    height: 105px;
-    object-fit: contain;
-  }
-
-  .followUs {
-    display: block;
-    grid-area: follow;
-    margin: 56px 0 0;
-    color: var(--paper);
-    font-family: var(--font-family-footer-heading);
-    font-size: var(--font-size-footer-label);
-    font-style: normal;
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-tight);
-    letter-spacing: var(--letter-spacing-default);
-  }
-
-  .socialLinks {
-    display: flex;
-    width: max-content;
-    grid-area: social;
-    flex-direction: row;
-    align-items: center;
-    gap: 28px;
-    margin: 16px 0 0;
-  }
-
-  .socialLink {
-    flex: 0 0 30px;
-    width: 30px;
-    height: 30px;
-    min-height: 30px;
-    padding: 0;
-    border: 0;
-    color: var(--Link_Default);
-  }
-
-  .socialLink:nth-child(1) { order: 1; }
-  .socialLink:nth-child(3) { order: 2; }
-  .socialLink:nth-child(4) { order: 3; }
-  .socialLink:nth-child(6) { order: 4; }
-  .socialLink:nth-child(8) { order: 5; }
-  .socialLink:nth-child(2) { order: 6; }
-  .socialLink:nth-child(5) { order: 7; }
-  .socialLink:nth-child(7) { order: 8; }
-
-  .pressKitLink {
-    display: inline-flex;
-    width: 137px;
-    height: 43px;
-    grid-area: press;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--paper);
-    margin: 40px 0 0;
-    color: var(--paper);
-    font-family: var(--font-family-action);
-    font-size: var(--font-size-footer-action);
-    font-style: normal;
-    font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-copy);
-    letter-spacing: var(--letter-spacing-default);
-  }
-
-  .footerScale > .siteFooter {
-    position: relative;
-    left: 0;
-    width: calc(100% - 170px);
-    height: auto;
-    min-height: 0;
-    border-top: 0;
-    margin: 54px auto 0;
-    padding: 20px 0 11px;
-    color: var(--Link_Default);
-    font-size: 15px;
-    line-height: 24px;
-    text-align: center;
-  }
-
-  .siteFooter::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    border-top: 1px solid var(--Link_Default);
-    content: "";
-  }
-}
 
 /* Keep the mobile footer canvas exact after the shared footer rules above. */
-@media (max-width: 402px) {
-  .footerViewport {
-    height: 871px;
-    background: transparent;
-  }
-
-  .footerScale {
-    height: 871px;
-  }
-
-  .footerScale > .contactSection {
-    flex: 0 0 auto;
-  }
-
-  .footerScale > .siteFooter {
-    margin-top: 27px;
-  }
-}

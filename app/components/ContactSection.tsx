@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { CSSProperties } from "react";
-import styles from "../page.module.css";
+import styles from "./Footer.module.css";
 import { assetPath, siteContent } from "../content";
 
 function SafeExternalLink({ label, url, className = "" }: { label: string; url: string; className?: string }) {

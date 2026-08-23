@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, type ReactNode } from "react";
-import styles from "../page.module.css";
+import styles from "./Footer.module.css";
 import { BREAKPOINTS, FOOTER_REFERENCE } from "../responsive";
 
 export function ResponsiveFooter({ children }: { children: ReactNode }) {
