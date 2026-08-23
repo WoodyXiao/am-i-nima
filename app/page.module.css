@@ -618,11 +618,16 @@
   font-weight: 700;
   text-decoration: none;
   overflow-wrap: anywhere;
+  transition: color .2s ease;
 }
 
 .emailLink:hover,
 .emailLink:focus-visible {
-  color: var(--green);
+  color: var(--Link_Hover);
+}
+
+.emailLink:active {
+  color: var(--Link_Down);
 }
 
 .pressKitLink {
