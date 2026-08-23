@@ -1,0 +1,748 @@
+/* Game introduction artwork, copy, release information, and Steam call-to-action buttons. Responsive overrides retain source order. */
+
+.introduction {
+  position: relative;
+  isolation: isolate;
+}
+
+.introduction::before,
+.introduction::after {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  width: 100%;
+  height: 13.875rem;
+  content: "";
+  pointer-events: none;
+}
+
+.introduction::before {
+  top: 0;
+  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.introduction::after {
+  bottom: 0;
+  background: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.introductionArt {
+  position: absolute;
+  z-index: -2;
+  inset: 2rem -14vw 0;
+  overflow: hidden;
+  opacity: .7;
+}
+
+.introductionArtImage {
+  object-fit: cover;
+  object-position: center 41%;
+}
+
+.introductionArtTablet,
+.introductionArtMobile {
+  display: none;
+}
+
+@media (min-width: 403px) and (max-width: 744px) {
+  .introductionArtDesktop {
+    display: none;
+  }
+
+  .introductionArtTablet {
+    display: block;
+  }
+}
+
+@media (max-width: 402px) {
+  .introductionArtDesktop {
+    display: none;
+  }
+
+  .introductionArtMobile {
+    display: block;
+  }
+}
+
+.introductionCopy {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(100% - 2rem, 32rem);
+  margin: 0 auto;
+  left: calc((100vw - 100%) / 2);
+  padding-top: 4rem;
+  text-align: center;
+}
+
+.gameLogo {
+  width: min(26.5rem, 82vw);
+  height: auto;
+  object-fit: contain;
+}
+
+.releaseDate {
+  display: none;
+}
+
+.introText {
+  width: min(29.5rem, 100%);
+  margin-top: -1.5rem;
+  color: var(--paper);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.introText p {
+  margin: 0;
+}
+
+.introText p + p {
+  margin-top: 1.5rem;
+}
+
+.introCtas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 2.5rem;
+  margin-top: 3.5rem;
+}
+
+.steamButton {
+  position: relative;
+  display: inline-flex;
+  min-height: 4.5rem;
+  align-items: center;
+  justify-content: center;
+  gap: .55rem;
+  padding: .9rem 1.5rem;
+  color: var(--paper);
+  font-family: "Signika Negative", system-ui, sans-serif;
+  font-size: 28.952px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color .2s ease;
+}
+
+.steamButtonBorder {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: fill;
+  filter: drop-shadow(0 2.59127px 0 #e5e7e6);
+  pointer-events: none;
+}
+
+.steamButtonFill {
+  fill: var(--Button_Primary_Background_Default);
+  transition: fill .2s ease;
+}
+
+.steamButton:hover,
+.steamButton:focus-visible {
+  color: var(--paper);
+}
+
+.steamButton:hover .steamButtonFill,
+.steamButton:focus-visible .steamButtonFill {
+  fill: var(--Button_Primary_Background_Hover);
+}
+
+.steamButton:active .steamButtonFill {
+  fill: var(--Button_Primary_Background_Down);
+}
+
+.steamIcon {
+  position: relative;
+  z-index: 1;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: .25rem;
+  object-fit: cover;
+}
+
+.steamButton > span:not(.steamButtonBorder) {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 600px) {
+  .introduction {
+    min-height: 37rem;
+    margin-top: -12rem;
+  }
+
+  .introductionCopy {
+    width: min(100% - 4rem, 31rem);
+    padding-top: 3.5rem;
+  }
+
+  .introText {
+    margin-top: -2rem;
+  }
+
+  .introCtas {
+    gap: 2.25rem;
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .introduction {
+    min-height: 32rem;
+    margin-top: -7.5rem;
+  }
+
+  .introductionArt {
+    inset: 0 -120vw -3rem;
+  }
+
+  .introductionCopy {
+    width: calc(100% - 4rem);
+    padding-top: 2rem;
+  }
+
+  .gameLogo {
+    width: min(19.625rem, 100%);
+  }
+
+  .introText {
+    width: 100%;
+    margin-top: -.75rem;
+    font-size: 1.0625rem;
+  }
+
+  .introText p + p {
+    margin-top: 1.25rem;
+  }
+
+  .introCtas {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+    margin-top: 2.5rem;
+  }
+
+  .steamButton {
+    min-height: 3.7rem;
+    padding: .75rem 1.1rem;
+  }
+
+  .steamIcon {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .steamButton {
+    transition: none;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  .introduction {
+    margin-top: 0;
+  }
+
+  .introductionArt {
+    inset: 77px -14vw 0;
+  }
+
+  .introductionCopy {
+    width: 536px;
+    padding-top: 158px;
+    transform: none;
+  }
+
+  .gameLogo {
+    width: 536px;
+    max-width: none;
+  }
+
+  .releaseDate {
+    display: block;
+    width: 500px;
+    height: 38px;
+    margin: -19px 0 0;
+    color: var(--paper);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: center;
+  }
+
+  .introText {
+    margin-top: 92px;
+  }
+
+  .introCtas {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    margin-top: 75px;
+  }
+
+  .introCtas .steamButtonDemo,
+.introCtas .steamButtonWishlist {
+    width: 240px;
+  }
+
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+
+  .introduction {
+    margin-top: -201px;
+  }
+
+  .introductionArt {
+    inset: 43px -76vw 0;
+  }
+
+  .introductionCopy {
+    width: 473px;
+    padding-top: 113px;
+    transform: none;
+  }
+
+  .gameLogo {
+    width: 424px;
+    max-width: none;
+  }
+
+  .introText {
+    margin-top: 32px;
+    min-height: 145px;
+  }
+
+  .introCtas {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    margin-top: 70px;
+  }
+
+  .introCtas .steamButtonDemo,
+.introCtas .steamButtonWishlist {
+    width: calc((100% - 1rem) / 2);
+  }
+}
+
+@media (max-width: 599px) {
+
+  .introduction {
+    margin-top: -222px;
+  }
+
+  .introductionArt {
+    inset: 0 -120vw 0;
+  }
+
+  .introductionCopy {
+    width: min(339px, calc(100vw - 48px));
+    padding-top: 102px;
+    transform: none;
+  }
+
+  .gameLogo {
+    width: min(78.1vw, 314px);
+  }
+
+  .introText {
+    width: 266px;
+    margin-top: 61px;
+    font-size: 17px;
+  }
+
+  .introText p + p {
+    margin-top: 1.25rem;
+  }
+
+  .introCtas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 29px;
+    margin-top: 63px;
+  }
+
+  .steamButton {
+    min-height: 45px;
+    padding: 9px 16px;
+  }
+
+  .steamIcon {
+    width: 22.5px;
+    height: 22.5px;
+  }
+
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .introduction {
+    margin-top: calc(78.515625vw - 804px);
+  }
+
+  .introductionArt {
+    inset: clamp(43px, calc(13.28125vw - 59px), 77px)
+      calc(172vw - 1905px) 0;
+  }
+
+  .introductionCopy {
+    width: calc(15.234375vw + 356px);
+    padding-top: calc(68.359375vw - 412px);
+    transform: none;
+  }
+
+  .introCtas {
+    margin-top: calc(1.953125vw + 55px);
+  }
+}
+.introduction {
+  min-height: 1021px;
+}
+
+.introductionArt {
+  top: 0;
+  right: -14vw;
+  bottom: auto;
+  left: -14vw;
+  height: 1021px;
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  .introduction {
+    min-height: calc(1021px + clamp(43px, calc(13.28125vw - 59px), 77px));
+  }
+
+  .introductionArt {
+    top: clamp(43px, calc(13.28125vw - 59px), 77px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .introductionArt {
+    top: 77px;
+  }
+}
+@media (min-width: 1024px) {
+  .introduction {
+    min-height: 900px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .introduction {
+    min-height: calc(62.890625vw + 256px);
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .introduction {
+    min-height: 739px;
+  }
+}
+
+@media (max-width: 599px) {
+  .introduction {
+    min-height: 726px;
+  }
+}
+@media (min-width: 744px) {
+
+  .introCtas {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 55px;
+  }
+
+  .introCtas .steamButtonDemo,
+.introCtas .steamButtonWishlist {
+    width: 214.07px;
+    height: 61.91px;
+    min-height: 61.91px;
+    flex: 0 0 auto;
+    gap: 8.64px;
+    padding: 12.9563px 22.4576px;
+    font-size: 28.952px;
+    line-height: 36px;
+  }
+
+  .steamButtonBorder {
+    inset: auto;
+    max-width: none;
+  }
+
+  .steamButtonDemo .steamButtonBorder {
+    top: -13.72px;
+    left: -13.30px;
+    width: 234px;
+    height: 84px;
+  }
+
+  .steamButtonWishlist {
+    padding-left: 31px;
+  }
+
+  .steamButtonWishlist .steamButtonBorder {
+    top: -7.14px;
+    left: -13.74px;
+    width: 235px;
+    height: 79px;
+  }
+
+  .introCtas .steamIcon {
+    width: 30.519px;
+    height: 30.519px;
+    border-radius: 4.606px;
+  }
+}
+
+@media (min-width: 744px) and (max-width: 1023px) {
+  .introductionCopy {
+    width: 500px;
+  }
+}
+@media (min-width: 745px) {
+
+  .introduction::before {
+    height: 222px;
+    background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  .introduction::after {
+    display: none;
+  }
+}
+.introduction {
+  margin-top: 0;
+}
+@media (min-width: 403px) and (max-width: 744px) {
+  .introduction {
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 744px) {
+  .introduction {
+    min-height: 879px;
+  }
+}
+@media (min-width: 1440px) {
+
+  .introductionArt {
+    right: -201.6px;
+    left: -201.6px;
+  }
+
+  .introductionCopy {
+    left: 0;
+  }
+}
+@media (min-width: 403px) and (max-width: 744px) {
+  .introduction {
+    min-height: 863px;
+  }
+
+  .introductionArt {
+    inset: 0;
+    width: 100%;
+    height: 863px;
+    opacity: 1;
+  }
+
+  .introductionArtImage {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .introductionCopy {
+    left: 0;
+    width: clamp(
+      339px,
+      calc(47.07602vw + 149.75439px),
+      500px
+    );
+    padding-top: 0;
+  }
+
+  .gameLogo {
+    width: clamp(
+      314px,
+      calc(54.38596vw + 95.36842px),
+      500px
+    );
+  }
+
+  .releaseDate {
+    display: block;
+    width: 100%;
+    height: 38px;
+    margin: -19px 0 0;
+    color: var(--paper);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: center;
+  }
+
+  .introText {
+    width: clamp(
+      266px,
+      calc(60.52632vw + 22.68421px),
+      473px
+    );
+    min-height: 0;
+    margin-top: 92px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .introCtas {
+    width: 100%;
+    gap: 55px;
+    margin-top: 48px;
+  }
+}
+@media (max-width: 402px) {
+  .introductionArt {
+    inset: 0;
+    width: 100%;
+    height: min(151.7413vw, 610px);
+    opacity: 1;
+  }
+
+  .introductionArtImage {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .introductionCopy {
+    left: 0;
+  }
+}
+@media (min-width: 403px) {
+  .introCtas .steamButtonDemo,
+.introCtas .steamButtonWishlist {
+    width: 214.07px;
+    height: 61.91px;
+    min-height: 61.91px;
+    flex: 0 0 auto;
+    gap: 8.64px;
+    padding: 12.9563px 22.4576px;
+    font-size: 29px;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .steamButtonBorder {
+    inset: auto;
+    max-width: none;
+  }
+
+  .steamButtonDemo .steamButtonBorder {
+    top: -13.72px;
+    left: -13.30px;
+    width: 234px;
+    height: 84px;
+  }
+
+  .steamButtonWishlist {
+    padding-left: 31px;
+  }
+
+  .steamButtonWishlist .steamButtonBorder {
+    top: -7.14px;
+    left: -13.74px;
+    width: 235px;
+    height: 79px;
+  }
+
+  .introCtas .steamIcon {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media (max-width: 402px) {
+  .introCtas .steamButtonDemo,
+.introCtas .steamButtonWishlist {
+    width: 175.79px;
+    height: 61.88px;
+    min-height: 61.88px;
+    flex: 0 0 61.88px;
+    gap: 6px;
+    padding: 0 14px;
+    font-size: 21.71px;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .steamButtonWishlist {
+    padding-left: 18px;
+  }
+
+  .steamButtonBorder,
+.steamButtonDemo .steamButtonBorder,
+.steamButtonWishlist .steamButtonBorder {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+  }
+
+  .introCtas .steamIcon {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+  }
+}
+@media (max-width: 402px) {
+  .introduction {
+    height: 610px;
+    min-height: 610px;
+  }
+
+  .introductionCopy {
+    padding-top: 102px;
+    transform: translateY(-180px);
+  }
+
+  .releaseDate {
+    display: block;
+    width: 100%;
+    height: 38px;
+    margin: -19px 0 0;
+    color: var(--paper);
+    font-size: clamp(19px, 5.97015vw, 24px);
+    font-weight: 700;
+    line-height: 38px;
+    text-align: center;
+  }
+
+  .introText {
+    margin-top: 52px;
+  }
+
+  .introCtas {
+    gap: 27px;
+    margin-top: 27px;
+  }
+
+  .introduction::after {
+    display: none;
+  }
+}
+

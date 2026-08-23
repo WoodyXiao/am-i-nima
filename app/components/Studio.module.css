@@ -1,0 +1,491 @@
+/* Studio artwork, logo, copy, and responsive background cropping. Cross-section Studio/Footer layout stays in page.module.css. */
+
+.studioSection {
+  position: relative;
+  min-height: 21rem;
+  overflow: hidden;
+  background: #050706;
+}
+
+.studioBackdrop {
+  position: absolute;
+  inset: 0;
+  opacity: .8;
+}
+
+.studioBackdropImage {
+  object-fit: cover;
+  object-position: center 51%;
+}
+
+.studioBackdropShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, .52), rgba(0, 0, 0, .58));
+}
+
+.studioContent {
+  position: relative;
+  display: grid;
+  width: min(100% - 2rem, 68rem);
+  grid-template-columns: minmax(12rem, 1fr) minmax(16rem, 1.15fr);
+  align-items: center;
+  gap: 3rem;
+  min-height: 21rem;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.studioLogo {
+  width: min(21.8rem, 100%);
+  height: auto;
+  justify-self: center;
+  object-fit: contain;
+}
+
+.studioCopy {
+  width: min(22.5rem, 100%);
+}
+
+.studioCopy h2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.studioCopy p {
+  margin: 0;
+  color: var(--paper);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 600px) {
+
+  .studioSection {
+    min-height: 18rem;
+  }
+
+  .studioContent {
+    width: min(100% - 2rem, 43.5rem);
+    min-height: 18rem;
+    gap: 2rem;
+    padding: 3rem 0;
+  }
+
+  .studioLogo {
+    width: min(11.8rem, 100%);
+  }
+
+  .studioCopy {
+    width: min(22.5rem, 100%);
+  }
+
+  .studioCopy p {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .studioSection {
+    min-height: 12.2rem;
+  }
+
+  .studioBackdrop {
+    opacity: .55;
+  }
+
+  .studioContent {
+    width: calc(100% - 4rem);
+    grid-template-columns: 1fr 1fr;
+    gap: 1.1rem;
+    min-height: 12.2rem;
+    padding: 1.5rem 0;
+  }
+
+  .studioLogo {
+    width: 100%;
+  }
+
+  .studioCopy {
+    width: 100%;
+  }
+
+  .studioCopy p {
+    font-size: .9375rem;
+    line-height: 1.6;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .studioContent {
+    grid-template-columns: 349px 361px;
+  }
+
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+
+  .studioSection {
+    min-height: 913px;
+  }
+
+  .studioBackdrop {
+    height: 913px;
+  }
+
+  .studioContent {
+    width: 582px;
+    grid-template-columns: 189px 361px;
+    align-items: start;
+    gap: 37px;
+    min-height: 913px;
+    padding: 32px 0 0;
+    margin-left: 81px;
+    margin-right: 0;
+  }
+
+  .studioLogo {
+    width: 189px;
+    justify-self: start;
+  }
+
+  .studioCopy {
+    width: 361px;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 599px) {
+
+  .studioSection {
+    min-height: 832px;
+  }
+
+  .studioBackdrop {
+    opacity: .55;
+  }
+
+  .studioContent {
+    width: 326px;
+    grid-template-columns: 131px 176px;
+    align-items: start;
+    gap: 19px;
+    min-height: 832px;
+    padding: 92px 0 0;
+    margin-left: 51px;
+    margin-right: 0;
+  }
+
+  .studioLogo {
+    width: 131px;
+    justify-self: start;
+  }
+
+  .studioCopy {
+    width: 176px;
+    margin-top: 0;
+  }
+
+  .studioCopy p {
+    font-size: 15px;
+  }
+
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .studioSection,
+.studioBackdrop {
+    min-height: calc(53.125vw + 505px);
+    height: calc(53.125vw + 505px);
+  }
+
+  .studioContent {
+    width: calc(66.796875vw + 69px);
+    grid-template-columns: calc(62.5vw - 291px) 361px;
+    gap: calc(2.34375vw + 19px);
+    min-height: calc(53.125vw + 505px);
+    padding-top: calc(3.515625vw + 5px);
+    margin-left: calc(53.515625vw - 330px);
+  }
+
+  .studioLogo {
+    width: calc(62.5vw - 291px);
+  }
+}
+.studioSection,
+.studioBackdrop,
+.studioContent {
+  height: 1021px;
+  min-height: 1021px;
+}
+
+.studioBackdrop {
+  top: 0;
+  bottom: auto;
+}
+@media (min-width: 1024px) {
+
+  .studioSection,
+.studioContent {
+    height: 1049px;
+    min-height: 1049px;
+  }
+
+  .studioBackdrop {
+    min-height: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .studioSection,
+.studioContent {
+    height: calc(53.125vw + 505px);
+    min-height: calc(53.125vw + 505px);
+  }
+
+  .studioBackdrop {
+    top: 0;
+    height: 913px;
+    min-height: 0;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+
+  .studioSection,
+.studioContent {
+    height: 913px;
+    min-height: 913px;
+  }
+
+  .studioBackdrop {
+    top: 0;
+    height: 913px;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 599px) {
+
+  .studioSection,
+.studioContent {
+    height: 832px;
+    min-height: 832px;
+  }
+
+  .studioBackdrop {
+    top: 0;
+    height: 832px;
+    min-height: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .studioSection {
+    height: 687px;
+    min-height: 687px;
+    background: #000;
+  }
+
+  .studioBackdrop {
+    top: 0;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    width: 1163px;
+    height: 687px;
+    opacity: .8;
+    transform: none;
+  }
+
+  .studioBackdropImage {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .studioBackdropShade {
+    background: linear-gradient(90deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .58));
+  }
+
+  .studioContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .studioLogo {
+    flex: 0 0 auto;
+    justify-self: auto;
+  }
+
+  .studioCopy {
+    flex: 0 0 auto;
+    margin-top: 32px;
+  }
+}
+
+@media (min-width: 403px) {
+  .studioSection {
+    margin-bottom: var(--section-bridge-space);
+  }
+
+  .studioSection {
+    margin-bottom: calc(var(--section-bridge-space) / 2);
+  }
+}
+@media (min-width: 403px) and (max-width: 744px) {
+
+  .studioSection {
+    display: flex;
+    height: auto;
+    min-height: 0;
+    flex-direction: column;
+    overflow: hidden;
+    padding-top: 140px;
+    background: #000;
+  }
+
+  .studioContent {
+    --studio-tablet-logo-width: clamp(
+      130px,
+      calc(17.54386vw + 59.47368px),
+      190px
+    );
+    --studio-tablet-gap: clamp(
+      19px,
+      calc(3.80117vw + 3.7193px),
+      32px
+    );
+    position: relative;
+    order: 1;
+    display: grid;
+    width: clamp(326px, calc(74.8538vw + 25.08772px), 582px);
+    height: auto;
+    min-height: 0;
+    grid-template-columns: var(--studio-tablet-logo-width) minmax(0, 1fr);
+    align-items: start;
+    gap: var(--studio-tablet-gap);
+    padding: 0;
+    margin: 0 auto 140px;
+  }
+
+  .studioLogo {
+    width: 100%;
+    height: auto;
+    justify-self: start;
+  }
+
+  .studioCopy {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .studioBackdrop {
+    position: relative;
+    order: 2;
+    inset: auto;
+    width: 100%;
+    height: clamp(832px, calc(23.68421vw + 736.78947px), 913px);
+    min-height: 0;
+    margin: 0;
+    transform: none;
+  }
+}
+@media (max-width: 402px) {
+
+  .studioSection {
+    position: static;
+    width: 100%;
+    height: 321px;
+    min-height: 321px;
+    overflow: visible;
+    background: #000;
+  }
+
+  .studioBackdrop {
+    position: absolute;
+    z-index: 0;
+    top: 60px;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    width: 100%;
+    height: 832px;
+    min-height: 832px;
+    opacity: .55;
+  }
+
+  .studioBackdropImage {
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .studioContent {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    width: 326px;
+    height: 240px;
+    min-height: 0;
+    grid-template-columns: 131px 176px;
+    align-items: start;
+    gap: 19px;
+    padding: 0;
+    margin: 60px auto 0;
+  }
+
+  .studioLogo {
+    width: 131px;
+    height: 84px;
+    justify-self: start;
+  }
+
+  .studioCopy {
+    width: 176px;
+    margin: 0;
+  }
+
+  .studioCopy p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+@media (min-width: 1024px) {
+  .studioSection {
+    width: min(1317px, calc(100% - 48px));
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .studioContent {
+    width: 363px;
+    height: 403px;
+    min-height: 403px;
+    padding: 0;
+    margin-top: 160px;
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  .studioLogo {
+    width: 350px;
+    height: 226px;
+  }
+
+  .studioCopy {
+    width: 363px;
+  }
+
+  .studioCopy p {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
-import styles from "../page.module.css";
+import styles from "./Gallery.module.css";
 import { assetPath, siteContent } from "../content";
 
 export function ScreenshotGallery() {
