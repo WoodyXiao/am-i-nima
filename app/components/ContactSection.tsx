@@ -17,6 +17,7 @@ export function ContactSection() {
       </div>
       <div className={styles.contactContent}>
         <h2 id="contact-title" className={styles.visuallyHidden}>Contact and social links</h2>
+        <p className={styles.emailUs}>Email us at</p>
         <p className={styles.followUs}>Follow us on</p>
         <a className={styles.emailLink} href={`mailto:${siteContent.contact.email}`}>{siteContent.contact.email}</a>
         <SafeExternalLink
@@ -40,6 +41,7 @@ export function ContactSection() {
                 className={styles.socialIcon}
                 style={{ "--social-icon": `url("${assetPath(social.icon)}")` } as CSSProperties}
               />
+              <span className={styles.socialLabel}>{social.label}</span>
             </a>
           ))}
         </nav>

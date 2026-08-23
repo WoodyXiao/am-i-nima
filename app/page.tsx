@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import { ContactSection } from "./components/ContactSection";
 import { GameIntroduction } from "./components/GameIntroduction";
 import { HeroVideo } from "./components/HeroVideo";
+import { ResponsiveFooter } from "./components/ResponsiveFooter";
 import { ScreenshotGallery } from "./components/ScreenshotGallery";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
@@ -14,11 +15,13 @@ export default function HomePage() {
       <HeroVideo />
       <GameIntroduction />
       <ScreenshotGallery />
-      <StudioSection />
-      <footer>
-        <ContactSection />
-        <SiteFooter />
-      </footer>
+      <div className={styles.studioFooterGroup}>
+        <StudioSection />
+        <ResponsiveFooter>
+          <ContactSection />
+          <SiteFooter />
+        </ResponsiveFooter>
+      </div>
     </main>
   );
 }

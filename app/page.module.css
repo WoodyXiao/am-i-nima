@@ -429,9 +429,31 @@
   cursor: pointer;
 }
 
+.galleryArrow::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: var(--Button_Primary_Background_Hover);
+  content: "";
+  mix-blend-mode: screen;
+  opacity: 0;
+  pointer-events: none;
+  transition: background-color .2s ease, opacity .2s ease;
+}
+
 .galleryArrow:hover,
 .galleryArrow:focus-visible {
-  filter: drop-shadow(0 0 .4rem var(--green));
+  filter: none;
+}
+
+.galleryArrow:hover::after,
+.galleryArrow:focus-visible::after {
+  opacity: 1;
+}
+
+.galleryArrow:active::after {
+  background: var(--Button_Primary_Background_Down);
+  opacity: 1;
 }
 
 .galleryArrowLeft {
@@ -2284,9 +2306,296 @@
   transition: color .2s ease;
 }
 
+.socialLabel,
+.emailUs {
+  display: none;
+}
+
 .socialLink:hover .socialIcon,
 .socialLink:focus-visible .socialIcon {
   color: var(--Link_Hover);
+}
+
+/* Exact 402px mobile studio/footer composition. */
+@media (max-width: 402px) {
+  .studioFooterGroup {
+    position: relative;
+    background: #000;
+  }
+
+  .studioSection {
+    position: static;
+    width: 100%;
+    height: 321px;
+    min-height: 321px;
+    overflow: visible;
+    background: #000;
+  }
+
+  .studioBackdrop {
+    position: absolute;
+    z-index: 0;
+    top: 60px;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    width: 100%;
+    height: 832px;
+    min-height: 832px;
+    opacity: .55;
+  }
+
+  .studioBackdropImage {
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .studioContent {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    width: 326px;
+    height: 240px;
+    min-height: 0;
+    grid-template-columns: 131px 176px;
+    align-items: start;
+    gap: 19px;
+    padding: 0;
+    margin: 60px auto 0;
+  }
+
+  .studioLogo {
+    width: 131px;
+    height: 84px;
+    justify-self: start;
+  }
+
+  .studioCopy {
+    width: 176px;
+    margin: 0;
+  }
+
+  .studioCopy p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .footerViewport {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 871px;
+    background: transparent;
+  }
+
+  .footerScale {
+    display: flex;
+    width: 100%;
+    height: 871px;
+    flex-direction: column;
+  }
+
+  .footerScale > .contactSection {
+    position: relative;
+    display: flex;
+    width: min(306px, calc(100% - 64px));
+    height: auto;
+    min-height: 0;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .awards {
+    display: flex;
+    width: 100%;
+    height: 74px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .indiecadeBadge {
+    width: 79px;
+    height: 74px;
+  }
+
+  .wingsBadge {
+    width: 112px;
+    height: 61px;
+  }
+
+  .bitsummitBadge {
+    display: block;
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+  }
+
+  .contactContent {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .emailUs,
+  .followUs {
+    display: block;
+    width: 100%;
+    color: var(--paper);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .emailUs {
+    order: 1;
+    margin: 31px 0 0;
+  }
+
+  .emailLink {
+    display: flex;
+    width: 100%;
+    height: 43px;
+    min-height: 43px;
+    order: 2;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid var(--paper);
+    background: var(--Button_Primary_Background_Default);
+    margin: 16px 0 0;
+    color: var(--paper);
+    font-family: "Signika Negative", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0;
+    white-space: nowrap;
+    transition: background-color .2s ease, color .2s ease;
+  }
+
+  .followUs {
+    order: 3;
+    margin: 45px 0 0;
+  }
+
+  .socialLinks {
+    display: flex;
+    width: 100%;
+    order: 4;
+    flex-direction: column;
+    gap: 17px;
+    margin: 13px 0 0;
+  }
+
+  .socialLink {
+    display: flex;
+    width: 100%;
+    height: 43px;
+    min-height: 43px;
+    flex: 0 0 43px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid var(--paper);
+    background: var(--Button_Primary_Background_Default);
+    color: var(--paper);
+    font-family: "Signika Negative", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0;
+    transition: background-color .2s ease, color .2s ease;
+  }
+
+  .emailLink:hover,
+  .emailLink:focus-visible,
+  .socialLink:hover,
+  .socialLink:focus-visible {
+    background: var(--Button_Primary_Background_Hover);
+    color: var(--paper);
+  }
+
+  .emailLink:active,
+  .socialLink:active {
+    background: var(--Button_Primary_Background_Down);
+    color: var(--paper);
+  }
+
+  .socialLink:nth-child(1) { order: 1; }
+  .socialLink:nth-child(3) { order: 2; }
+  .socialLink:nth-child(4) { order: 3; }
+  .socialLink:nth-child(6) { order: 4; }
+  .socialLink:nth-child(8) { order: 5; }
+  .socialLink:nth-child(2) { order: 6; }
+  .socialLink:nth-child(5) { order: 7; }
+  .socialLink:nth-child(7) { order: 8; }
+
+  .socialIcon {
+    display: none;
+  }
+
+  .socialLabel {
+    display: inline;
+  }
+
+  .pressKitLink {
+    display: flex;
+    width: 100%;
+    height: 43px;
+    min-height: 43px;
+    order: 5;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid var(--paper);
+    margin: 38px 0 0;
+    color: var(--paper);
+    font-family: "Signika Negative", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0;
+  }
+
+  .footerScale > .siteFooter {
+    position: relative;
+    left: 0;
+    width: min(306px, calc(100% - 64px));
+    height: 44px;
+    min-height: 44px;
+    flex: 0 0 44px;
+    border-top: 0;
+    margin: 27px auto 0;
+    padding: 20px 0 0;
+    color: var(--Link_Default);
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .siteFooter::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    border-top: 1px solid var(--Link_Default);
+    content: "";
+  }
 }
 
 .socialLink:active .socialIcon {
@@ -2732,38 +3041,396 @@
   }
 }
 
-footer > .contactSection {
+.footerScale > .contactSection {
   flex: 1 1 auto;
   min-height: 0;
   padding-top: 0;
 }
 
-.pageShell > footer {
+.footerViewport {
   display: flex;
   width: 100%;
   flex-direction: column;
   background: #000;
 }
 
-.pageShell > footer > .siteFooter {
+.footerScale {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.footerScale > .siteFooter {
   flex: 0 0 auto;
   margin-top: 0;
 }
 
 @media (min-width: 745px) {
-  .pageShell > footer {
+  .footerViewport {
+    position: relative;
+    display: block;
+    height: var(--footer-height, 400px);
+    overflow: hidden;
+  }
+
+  .footerScale {
+    position: absolute;
+    top: 0;
+    left: var(--footer-offset, 0);
+    width: 1440px;
     height: 400px;
+    transform: scale(var(--footer-scale, 1));
+    transform-origin: top left;
   }
 }
 
 @media (min-width: 403px) and (max-width: 744px) {
-  .pageShell > footer {
-    height: 550px;
+  .footerViewport {
+    position: relative;
+    display: block;
+    height: var(--footer-height, 488px);
+    overflow: hidden;
+  }
+
+  .footerScale {
+    position: absolute;
+    top: 0;
+    left: var(--footer-offset, 0);
+    width: 744px;
+    height: 488px;
+    transform: scale(var(--footer-scale, 1));
+    transform-origin: top left;
   }
 }
 
 @media (max-width: 402px) {
-  .pageShell > footer {
+  .footerViewport {
     height: 950px;
+  }
+}
+
+/* Keep the 1440px footer composition intact while scaling toward tablet. */
+@media (min-width: 745px) and (max-width: 1023px) {
+  .contactSection {
+    display: grid;
+    width: 1317px;
+    height: 426px;
+    grid-template-columns: 57.5% 42.5%;
+    grid-template-rows: 40px 70px 43px;
+    grid-template-areas:
+      "follow email"
+      "social awards"
+      "press awards";
+    gap: 0;
+    align-items: start;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 70px 23px 0;
+  }
+
+  .contactContent {
+    display: contents;
+  }
+
+  .followUs {
+    display: block;
+    grid-area: follow;
+    margin: 0;
+    color: var(--paper);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .emailLink {
+    display: block;
+    width: max-content;
+    min-height: 0;
+    grid-area: email;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: var(--paper);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .socialLinks {
+    display: flex;
+    width: max-content;
+    grid-area: social;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 28px;
+    margin: 0;
+  }
+
+  .socialLink {
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    min-height: 30px;
+    padding: 0;
+    border: 0;
+    color: var(--Link_Default);
+  }
+
+  .socialLink:nth-child(1) { order: 1; }
+  .socialLink:nth-child(3) { order: 2; }
+  .socialLink:nth-child(4) { order: 3; }
+  .socialLink:nth-child(6) { order: 4; }
+  .socialLink:nth-child(8) { order: 5; }
+  .socialLink:nth-child(2) { order: 6; }
+  .socialLink:nth-child(5) { order: 7; }
+  .socialLink:nth-child(7) { order: 8; }
+
+  .pressKitLink {
+    display: inline-flex;
+    width: 137px;
+    height: 43px;
+    grid-area: press;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--paper);
+    margin: 0;
+    color: var(--paper);
+    font-family: "Signika Negative", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  .awards {
+    display: flex;
+    height: 123px;
+    grid-area: awards;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 40.5px;
+    min-width: 0;
+    margin: 25px 0 0;
+    padding-right: 16px;
+  }
+
+  .indiecadeBadge {
+    width: 122px;
+    height: 114px;
+  }
+
+  .wingsBadge {
+    width: 172px;
+    height: 93px;
+  }
+
+  .bitsummitBadge {
+    display: block;
+    width: 105px;
+    height: 105px;
+    object-fit: contain;
+  }
+
+  .siteFooter {
+    position: relative;
+    width: 1317px;
+    height: auto;
+    min-height: 0;
+    border-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 28px 0 36px;
+    color: var(--Link_Default);
+    font-size: 17px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .siteFooter::before {
+    position: absolute;
+    top: 0;
+    right: 39px;
+    left: 23px;
+    border-top: 1px solid var(--Link_Default);
+    content: "";
+  }
+}
+
+/* Exact tablet footer composition. */
+@media (min-width: 403px) and (max-width: 744px) {
+  .footerScale > .contactSection {
+    display: grid;
+    width: calc(100% - 170px);
+    height: auto;
+    flex: 0 0 auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "email"
+      "awards"
+      "follow"
+      "social"
+      "press";
+    gap: 0;
+    align-items: start;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .contactContent {
+    display: contents;
+  }
+
+  .emailLink {
+    display: block;
+    width: max-content;
+    min-height: 0;
+    grid-area: email;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: var(--paper);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+
+  .awards {
+    display: flex;
+    width: 100%;
+    height: 114px;
+    grid-area: awards;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 28px;
+    margin: 25px 0 0;
+    padding: 0;
+  }
+
+  .indiecadeBadge {
+    width: 122px;
+    height: 114px;
+  }
+
+  .wingsBadge {
+    width: 172px;
+    height: 93px;
+  }
+
+  .bitsummitBadge {
+    display: block;
+    width: 105px;
+    height: 105px;
+    object-fit: contain;
+  }
+
+  .followUs {
+    display: block;
+    grid-area: follow;
+    margin: 56px 0 0;
+    color: var(--paper);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .socialLinks {
+    display: flex;
+    width: max-content;
+    grid-area: social;
+    flex-direction: row;
+    align-items: center;
+    gap: 28px;
+    margin: 16px 0 0;
+  }
+
+  .socialLink {
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    min-height: 30px;
+    padding: 0;
+    border: 0;
+    color: var(--Link_Default);
+  }
+
+  .socialLink:nth-child(1) { order: 1; }
+  .socialLink:nth-child(3) { order: 2; }
+  .socialLink:nth-child(4) { order: 3; }
+  .socialLink:nth-child(6) { order: 4; }
+  .socialLink:nth-child(8) { order: 5; }
+  .socialLink:nth-child(2) { order: 6; }
+  .socialLink:nth-child(5) { order: 7; }
+  .socialLink:nth-child(7) { order: 8; }
+
+  .pressKitLink {
+    display: inline-flex;
+    width: 137px;
+    height: 43px;
+    grid-area: press;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--paper);
+    margin: 40px 0 0;
+    color: var(--paper);
+    font-family: "Signika Negative", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0;
+  }
+
+  .footerScale > .siteFooter {
+    position: relative;
+    left: 0;
+    width: calc(100% - 170px);
+    height: auto;
+    min-height: 0;
+    border-top: 0;
+    margin: 54px auto 0;
+    padding: 20px 0 11px;
+    color: var(--Link_Default);
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .siteFooter::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    border-top: 1px solid var(--Link_Default);
+    content: "";
+  }
+}
+
+/* Keep the mobile footer canvas exact after the shared footer rules above. */
+@media (max-width: 402px) {
+  .footerViewport {
+    height: 871px;
+    background: transparent;
+  }
+
+  .footerScale {
+    height: 871px;
+  }
+
+  .footerScale > .contactSection {
+    flex: 0 0 auto;
+  }
+
+  .footerScale > .siteFooter {
+    margin-top: 27px;
   }
 }
