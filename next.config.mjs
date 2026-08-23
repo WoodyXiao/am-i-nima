@@ -9,6 +9,7 @@ const nextConfig = {
   assetPrefix: basePath ? `${basePath}/` : undefined,
   images: {
     unoptimized: true,
+    qualities: [90, 100],
   },
 };
 
