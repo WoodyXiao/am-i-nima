@@ -7,6 +7,7 @@ import { assetPath, siteContent } from "../content";
 
 export function ScreenshotGallery() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const thumbnailsRef = useRef<HTMLDivElement>(null);
   const thumbnailRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const screenshots = siteContent.gallery;
   const hasMultiple = screenshots.length > 1;
@@ -29,10 +30,20 @@ export function ScreenshotGallery() {
   }, [hasMultiple, move]);
 
   useEffect(() => {
-    thumbnailRefs.current[activeIndex]?.scrollIntoView({
+    const thumbnails = thumbnailsRef.current;
+    const activeThumbnail = thumbnailRefs.current[activeIndex];
+    if (!thumbnails || !activeThumbnail) return;
+
+    const thumbnailsRect = thumbnails.getBoundingClientRect();
+    const thumbnailRect = activeThumbnail.getBoundingClientRect();
+    const left = thumbnails.scrollLeft
+      + thumbnailRect.left
+      - thumbnailsRect.left
+      - (thumbnails.clientWidth - thumbnailRect.width) / 2;
+
+    thumbnails.scrollTo({
+      left,
       behavior: "smooth",
-      block: "nearest",
-      inline: "center",
     });
   }, [activeIndex]);
 
@@ -106,7 +117,7 @@ export function ScreenshotGallery() {
             </>
           )}
         </div>
-        <div className={styles.galleryThumbnails} role="list" aria-label="Game image thumbnails">
+        <div ref={thumbnailsRef} className={styles.galleryThumbnails} role="list" aria-label="Game image thumbnails">
           {screenshots.map((screenshot, index) => (
             <button
               className={`${styles.thumbnail} ${index === activeIndex ? styles.thumbnailActive : ""}`}
