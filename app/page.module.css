@@ -1,3 +1,10 @@
+/*
+ * Responsive tiers
+ * mobile: <= 402px
+ * tablet: 403px - 744px
+ * desktop: >= 745px
+ * supporting layout boundaries: 600px, 768px, 1024px and 1440px
+ */
 .pageShell {
   --section-padding: clamp(1.125rem, 4vw, 6rem);
   position: relative;
@@ -705,7 +712,7 @@
   border: 0;
 }
 
-@media (min-width: 37.5rem) {
+@media (min-width: 600px) {
   .introduction {
     min-height: 37rem;
     margin-top: -12rem;
@@ -986,7 +993,7 @@
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 1024px) {
   .introduction {
     min-height: 39rem;
     margin-top: -13rem;
@@ -1024,7 +1031,7 @@
 
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 1024px) {
   .videoViewport {
     height: 810px;
     min-height: 810px;
@@ -1208,7 +1215,7 @@
   }
 }
 
-@media (min-width: 37.5rem) and (max-width: 63.99rem) {
+@media (min-width: 600px) and (max-width: 1023px) {
   .videoViewport {
     height: 810px;
     min-height: 810px;
@@ -1392,7 +1399,7 @@
   }
 }
 
-@media (max-width: 37.49rem) {
+@media (max-width: 599px) {
   .videoViewport {
     height: 609px;
     min-height: 609px;
@@ -1597,7 +1604,7 @@
 /* Keep the tablet composition fluid before the phone breakpoint. This avoids
    clipping the 711px reference frame when the viewport is between 600px and
    768px wide. */
-@media (min-width: 37.5rem) and (max-width: 47.99rem) {
+@media (min-width: 600px) and (max-width: 767px) {
   .gallerySection {
     min-height: auto;
     padding-bottom: 112px;
@@ -1632,7 +1639,7 @@
 /* Below the tablet breakpoint the main frame must determine the stage
    height. The old 206px stage was only correct for the 375px reference
    frame; at widths such as 594px the taller image covered the thumbnail rail. */
-@media (max-width: 37.49rem) {
+@media (max-width: 599px) {
   .galleryStage {
     height: auto;
   }
@@ -1641,7 +1648,7 @@
 /* Fluid bridge between the tablet and desktop compositions. The supplied
    reference frames are intentionally fixed at 768px and 1024px, but the
    browser still needs a stable layout while it is being resized between them. */
-@media (min-width: 48rem) and (max-width: 63.99rem) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .introduction {
     min-height: calc(62.890625vw + 256px);
     margin-top: calc(78.515625vw - 804px);
@@ -1720,7 +1727,7 @@
   height: 1021px;
 }
 
-@media (min-width: 37.5rem) and (max-width: 63.99rem) {
+@media (min-width: 600px) and (max-width: 1023px) {
   .introduction {
     min-height: calc(1021px + clamp(43px, calc(13.28125vw - 59px), 77px));
   }
@@ -1730,7 +1737,7 @@
   }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 1024px) {
   .introduction {
     min-height: 1098px;
   }
@@ -1758,7 +1765,7 @@
 /* Keep the artwork sizing independent from the document-flow heights. The
    reference compositions overlap the studio/contact artwork, so using the
    1021px canvas as the section height pushes the footer too far down. */
-@media (min-width: 64rem) {
+@media (min-width: 1024px) {
   .introduction {
     min-height: 900px;
   }
@@ -1792,7 +1799,7 @@
   }
 }
 
-@media (min-width: 48rem) and (max-width: 63.99rem) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .introduction {
     min-height: calc(62.890625vw + 256px);
   }
@@ -1821,7 +1828,7 @@
   }
 }
 
-@media (min-width: 37.5rem) and (max-width: 47.99rem) {
+@media (min-width: 600px) and (max-width: 767px) {
   .introduction {
     min-height: 739px;
   }
@@ -1850,7 +1857,7 @@
   }
 }
 
-@media (max-width: 37.49rem) {
+@media (max-width: 599px) {
   .introduction {
     min-height: 726px;
   }
@@ -1884,7 +1891,7 @@
 /* Keep the desktop-to-tablet carousel as one proportional composition. The
    1425 x 706 canvas is the desktop reference; every child scales with it
    while the viewport is resized down toward the tablet breakpoint. */
-@media (min-width: 46.5625rem) {
+@media (min-width: 745px) {
   .galleryStage {
     display: block;
     width: min(100%, 90rem);
@@ -1953,7 +1960,7 @@
 
 /* The tablet composition begins at 744px. Above that point the desktop
    carousel remains intact and the intro CTAs keep their designed width. */
-@media (min-width: 46.5rem) {
+@media (min-width: 744px) {
   .galleryThumbnails {
     display: none;
   }
@@ -2006,7 +2013,7 @@
   }
 }
 
-@media (min-width: 46.5rem) and (max-width: 63.99rem) {
+@media (min-width: 744px) and (max-width: 1023px) {
   .introductionCopy {
     width: 500px;
   }
@@ -2014,7 +2021,7 @@
 
 /* Desktop studio reference: the key art is a fixed 1163 x 687 canvas on
    the left, while the remaining page area stays pure black. */
-@media (min-width: 64rem) {
+@media (min-width: 1024px) {
   .studioSection {
     height: 687px;
     min-height: 687px;
@@ -2098,7 +2105,7 @@
 /* On the desktop/tablet composition, the section background starts at the
    main frame. The two side previews stay above that boundary and can overlap
    the preceding introduction section. */
-@media (min-width: 46.5625rem) {
+@media (min-width: 745px) {
   .videoBottomFade {
     display: block;
   }
@@ -2123,7 +2130,7 @@
 
 /* 744px is the tablet reference frame. It includes the thumbnail rail and
    does not keep the 50px desktop transition spacer above the main image. */
-@media (min-width: 37.5rem) and (max-width: 46.5rem) {
+@media (min-width: 600px) and (max-width: 744px) {
   .gallerySection {
     padding-top: 0;
   }
@@ -2162,7 +2169,7 @@
   }
 }
 
-@media (max-width: 46.5rem) {
+@media (max-width: 744px) {
   .videoMedia,
   .videoFallback {
     height: 100%;
@@ -2607,7 +2614,7 @@
 }
 
 /* Revised 1600px desktop footer composition. */
-@media (min-width: 64rem) {
+@media (min-width: 1024px) {
   .studioSection {
     width: min(1317px, calc(100% - 48px));
     margin-right: auto;
