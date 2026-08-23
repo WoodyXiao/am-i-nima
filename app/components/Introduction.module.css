@@ -11,7 +11,7 @@
   z-index: -1;
   left: 0;
   width: 100%;
-  height: 13.875rem;
+  height: 222px;
   content: "";
   pointer-events: none;
 }
@@ -427,16 +427,6 @@
   .introduction {
     min-height: calc(1021px + clamp(43px, calc(13.28125vw - 59px), 77px));
   }
-
-  .introductionArt {
-    top: clamp(43px, calc(13.28125vw - 59px), 77px);
-  }
-}
-
-@media (min-width: 1024px) {
-  .introductionArt {
-    top: 77px;
-  }
 }
 @media (min-width: 1024px) {
   .introduction {
@@ -517,11 +507,6 @@
   }
 }
 @media (min-width: 745px) {
-
-  .introduction::before {
-    height: 222px;
-    background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 100%);
-  }
 
   .introduction::after {
     display: none;
@@ -745,4 +730,3 @@
     display: none;
   }
 }
-

@@ -246,8 +246,8 @@
 
   .studioSection,
 .studioContent {
-    height: calc(53.125vw + 505px);
-    min-height: calc(53.125vw + 505px);
+    height: 913px;
+    min-height: 913px;
   }
 
   .studioBackdrop {
@@ -488,4 +488,3 @@
     font-weight: 500;
   }
 }
-

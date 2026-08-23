@@ -37,26 +37,34 @@
 }
 
 .mirrorFrame {
+  --gallery-preview-border-width: .15rem;
+  --gallery-preview-shadow-depth: .625rem;
   position: absolute;
   z-index: 1;
   top: 50%;
   width: 13.75rem;
   height: 38.1875rem;
-  overflow: hidden;
-  border-top: .15rem solid #fff;
-  border-bottom: .15rem solid #fff;
-  box-shadow: 0 .625rem 0 #fff;
+  overflow: visible;
+  border-top: var(--gallery-preview-border-width) solid #fff;
+  border-bottom: var(--gallery-preview-border-width) solid #fff;
+  box-shadow: 0 var(--gallery-preview-shadow-depth) 0 #fff;
   transform: translateY(-50%);
 }
 
 .mirrorLeft {
   left: 6.8%;
-  border-right: .15rem solid #fff;
+  border-right: var(--gallery-preview-border-width) solid #fff;
 }
 
 .mirrorRight {
   right: 6.8%;
-  border-left: .15rem solid #fff;
+  border-left: var(--gallery-preview-border-width) solid #fff;
+}
+
+.mirrorImageClip {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
 }
 
 .mirrorImageLeft,
@@ -77,21 +85,21 @@
 
 .previewShade {
   position: absolute;
-  z-index: 1;
-  top: 0;
-  width: 75px;
-  height: 611px;
+  z-index: 2;
+  top: calc(0px - var(--gallery-preview-border-width));
+  width: calc(100% + var(--gallery-preview-border-width) + var(--gallery-preview-border-width));
+  height: calc(100% + var(--gallery-preview-border-width) + var(--gallery-preview-border-width) + var(--gallery-preview-shadow-depth));
   pointer-events: none;
   background: linear-gradient(270deg, #000 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .previewShadeLeft {
-  left: 0;
-  transform: rotate(-180deg);
+  left: calc(0px - var(--gallery-preview-border-width));
+  background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .previewShadeRight {
-  right: 0;
+  right: calc(0px - var(--gallery-preview-border-width));
 }
 
 .galleryArrow {
@@ -505,12 +513,14 @@
   }
 
   .mirrorFrame {
+    --gallery-preview-border-width: clamp(1px, .167vw, 2.4px);
+    --gallery-preview-shadow-depth: clamp(1px, .694vw, 10px);
     display: block;
     top: 5.52%;
     width: 15.44%;
     height: 86.54%;
-    border-width: clamp(1px, .167vw, 2.4px);
-    box-shadow: 0 clamp(1px, .694vw, 10px) #fff;
+    border-width: var(--gallery-preview-border-width);
+    box-shadow: 0 var(--gallery-preview-shadow-depth) 0 #fff;
     transform: none;
   }
 
@@ -520,11 +530,6 @@
 
   .mirrorRight {
     right: 6.8%;
-  }
-
-  .previewShade {
-    width: 34.09%;
-    height: 100%;
   }
 
   .galleryArrow {
@@ -568,7 +573,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: #050706;
+  background: #000;
   content: "";
   pointer-events: none;
 }
@@ -615,4 +620,3 @@
     padding-top: 0;
   }
 }
-

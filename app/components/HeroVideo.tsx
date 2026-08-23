@@ -44,7 +44,6 @@ export function HeroVideo() {
           <div className={styles.videoFallbackShade} aria-hidden="true" />
         </div>
       )}
-      <div className={styles.videoBottomFade} aria-hidden="true" />
     </section>
   );
 }

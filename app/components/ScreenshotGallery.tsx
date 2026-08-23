@@ -51,7 +51,9 @@ export function ScreenshotGallery() {
       >
         <div className={styles.galleryStage}>
           <div className={`${styles.mirrorFrame} ${styles.mirrorLeft}`} aria-hidden="true">
-            <Image src={assetPath(previous.src)} alt="" fill sizes="220px" className={styles.mirrorImageLeft} />
+            <span className={styles.mirrorImageClip}>
+              <Image src={assetPath(previous.src)} alt="" fill sizes="220px" className={styles.mirrorImageLeft} />
+            </span>
             <span className={`${styles.previewShade} ${styles.previewShadeLeft}`} />
           </div>
           <div className={styles.galleryMainFrame} aria-live="polite">
@@ -66,7 +68,9 @@ export function ScreenshotGallery() {
             />
           </div>
           <div className={`${styles.mirrorFrame} ${styles.mirrorRight}`} aria-hidden="true">
-            <Image src={assetPath(next.src)} alt="" fill sizes="220px" className={styles.mirrorImageRight} />
+            <span className={styles.mirrorImageClip}>
+              <Image src={assetPath(next.src)} alt="" fill sizes="220px" className={styles.mirrorImageRight} />
+            </span>
             <span className={`${styles.previewShade} ${styles.previewShadeRight}`} />
           </div>
           {hasMultiple && (
