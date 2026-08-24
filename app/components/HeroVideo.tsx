@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../page.module.css";
+import styles from "./HeroVideo.module.css";
 import { assetPath, siteContent } from "../content";
 
 export function HeroVideo() {
