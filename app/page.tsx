@@ -2,7 +2,7 @@ import styles from "./page.module.css";
 import { GameIntroduction } from "./components/GameIntroduction";
 import { HeroVideo } from "./components/HeroVideo";
 import { ScreenshotGallery } from "./components/ScreenshotGallery";
-import { SiteFooter } from "./components/SiteFooter";
+import { SiteFooter } from "./components/footer/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
 import { StudioSection } from "./components/StudioSection";
 

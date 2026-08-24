@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, type ReactNode } from "react";
 import styles from "./Footer.module.css";
-import { BREAKPOINTS, FOOTER_REFERENCE } from "../responsive";
+import { BREAKPOINTS, FOOTER_REFERENCE } from "./constants";
 
 export function ResponsiveFooter({ children }: { children: ReactNode }) {
   const footerRef = useRef<HTMLElement>(null);
