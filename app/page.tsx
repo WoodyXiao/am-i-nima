@@ -1,8 +1,6 @@
 import styles from "./page.module.css";
-import { ContactSection } from "./components/ContactSection";
 import { GameIntroduction } from "./components/GameIntroduction";
 import { HeroVideo } from "./components/HeroVideo";
-import { ResponsiveFooter } from "./components/ResponsiveFooter";
 import { ScreenshotGallery } from "./components/ScreenshotGallery";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
@@ -17,10 +15,7 @@ export default function HomePage() {
       <ScreenshotGallery />
       <div className={styles.studioFooterGroup}>
         <StudioSection />
-        <ResponsiveFooter>
-          <ContactSection />
-          <SiteFooter />
-        </ResponsiveFooter>
+        <SiteFooter />
       </div>
     </main>
   );

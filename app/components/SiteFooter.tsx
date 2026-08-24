@@ -1,5 +1,12 @@
-import styles from "./Footer.module.css";
+import { ContactSection } from "./ContactSection";
+import { FooterCopyright } from "./FooterCopyright";
+import { ResponsiveFooter } from "./ResponsiveFooter";
 
 export function SiteFooter() {
-  return <div className={styles.siteFooter}>© 2026. Ho Games Studio</div>;
+  return (
+    <ResponsiveFooter>
+      <ContactSection />
+      <FooterCopyright />
+    </ResponsiveFooter>
+  );
 }
