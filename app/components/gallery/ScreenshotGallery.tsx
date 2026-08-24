@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./Gallery.module.css";
-import { assetPath, siteContent } from "../content";
+import { assetPath, siteContent } from "../../content";
 
 type GallerySide = "left" | "right";
 

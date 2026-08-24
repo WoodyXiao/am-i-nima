@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./Introduction.module.css";
-import { assetPath } from "../content";
+import { assetPath } from "../../content";
 
 type SteamButtonProps = {
   label: string;

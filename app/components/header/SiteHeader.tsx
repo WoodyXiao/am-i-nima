@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./Header.module.css";
-import { assetPath, siteContent } from "../content";
+import { assetPath, siteContent } from "../../content";
 
 export function SiteHeader() {
   const wishlistUrl = siteContent.steam.wishlistUrl;

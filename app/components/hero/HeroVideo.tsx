@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./HeroVideo.module.css";
-import { assetPath, siteContent } from "../content";
+import { assetPath, siteContent } from "../../content";
 
 export function HeroVideo() {
   const videoSrc = siteContent.videoSrc;

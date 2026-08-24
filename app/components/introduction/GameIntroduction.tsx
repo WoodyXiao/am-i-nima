@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./Introduction.module.css";
-import { assetPath, siteContent } from "../content";
+import { assetPath, siteContent } from "../../content";
 import { SteamButton } from "./SteamButton";
 
 export function GameIntroduction() {

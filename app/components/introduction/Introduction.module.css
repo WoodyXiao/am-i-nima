@@ -1,4 +1,4 @@
-/* Game introduction artwork, copy, release information, and Steam call-to-action buttons. Responsive overrides retain source order. */
+/* Game introduction artwork, copy, release information, and Steam call-to-action buttons. Responsive rules retain source order. */
 
 .introduction {
   position: relative;
@@ -504,6 +504,18 @@
 @media (min-width: 744px) and (max-width: 1023px) {
   .introductionCopy {
     width: 500px;
+  }
+
+  .releaseDate {
+    display: block;
+    width: 500px;
+    height: 38px;
+    margin: -19px 0 0;
+    color: var(--paper);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: center;
   }
 }
 @media (min-width: 745px) {
