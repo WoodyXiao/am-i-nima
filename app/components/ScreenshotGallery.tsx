@@ -5,6 +5,61 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./Gallery.module.css";
 import { assetPath, siteContent } from "../content";
 
+type GallerySide = "left" | "right";
+
+type GalleryPreviewProps = {
+  side: GallerySide;
+  src: string;
+};
+
+function GalleryPreview({ side, src }: GalleryPreviewProps) {
+  const isLeft = side === "left";
+
+  return (
+    <div
+      className={`${styles.mirrorFrame} ${isLeft ? styles.mirrorLeft : styles.mirrorRight}`}
+      aria-hidden="true"
+    >
+      <span className={styles.mirrorImageClip}>
+        <Image
+          src={assetPath(src)}
+          alt=""
+          fill
+          sizes="220px"
+          className={isLeft ? styles.mirrorImageLeft : styles.mirrorImageRight}
+        />
+      </span>
+      <span className={`${styles.previewShade} ${isLeft ? styles.previewShadeLeft : styles.previewShadeRight}`} />
+    </div>
+  );
+}
+
+type GalleryArrowProps = {
+  side: GallerySide;
+  onClick: () => void;
+};
+
+function GalleryArrow({ side, onClick }: GalleryArrowProps) {
+  const isLeft = side === "left";
+
+  return (
+    <button
+      className={`${styles.galleryArrow} ${isLeft ? styles.galleryArrowLeft : styles.galleryArrowRight}`}
+      type="button"
+      onClick={onClick}
+      aria-label={isLeft ? "Previous game image" : "Next game image"}
+    >
+      <Image
+        src={assetPath(`/assets/borders/arrow-${side}.svg`)}
+        alt=""
+        fill
+        sizes="45px"
+        className={isLeft ? styles.galleryArrowIcon : `${styles.galleryArrowIcon} ${styles.galleryArrowIconRight}`}
+      />
+    </button>
+  );
+}
+
 export function ScreenshotGallery() {
   const [activeIndex, setActiveIndex] = useState(0);
   const thumbnailsRef = useRef<HTMLDivElement>(null);
@@ -61,12 +116,7 @@ export function ScreenshotGallery() {
         aria-label="Am I Nima? game images"
       >
         <div className={styles.galleryStage}>
-          <div className={`${styles.mirrorFrame} ${styles.mirrorLeft}`} aria-hidden="true">
-            <span className={styles.mirrorImageClip}>
-              <Image src={assetPath(previous.src)} alt="" fill sizes="220px" className={styles.mirrorImageLeft} />
-            </span>
-            <span className={`${styles.previewShade} ${styles.previewShadeLeft}`} />
-          </div>
+          <GalleryPreview side="left" src={previous.src} />
           <div className={styles.galleryMainFrame} aria-live="polite">
             <Image
               src={assetPath(active.src)}
@@ -78,42 +128,11 @@ export function ScreenshotGallery() {
               className={styles.galleryImage}
             />
           </div>
-          <div className={`${styles.mirrorFrame} ${styles.mirrorRight}`} aria-hidden="true">
-            <span className={styles.mirrorImageClip}>
-              <Image src={assetPath(next.src)} alt="" fill sizes="220px" className={styles.mirrorImageRight} />
-            </span>
-            <span className={`${styles.previewShade} ${styles.previewShadeRight}`} />
-          </div>
+          <GalleryPreview side="right" src={next.src} />
           {hasMultiple && (
             <>
-              <button
-                className={`${styles.galleryArrow} ${styles.galleryArrowLeft}`}
-                type="button"
-                onClick={() => move(-1)}
-                aria-label="Previous game image"
-              >
-                <Image
-                  src={assetPath("/assets/borders/arrow-left.svg")}
-                  alt=""
-                  fill
-                  sizes="45px"
-                  className={styles.galleryArrowIcon}
-                />
-              </button>
-              <button
-                className={`${styles.galleryArrow} ${styles.galleryArrowRight}`}
-                type="button"
-                onClick={() => move(1)}
-                aria-label="Next game image"
-              >
-                <Image
-                  src={assetPath("/assets/borders/arrow-right.svg")}
-                  alt=""
-                  fill
-                  sizes="45px"
-                  className={`${styles.galleryArrowIcon} ${styles.galleryArrowIconRight}`}
-                />
-              </button>
+              <GalleryArrow side="left" onClick={() => move(-1)} />
+              <GalleryArrow side="right" onClick={() => move(1)} />
             </>
           )}
         </div>
