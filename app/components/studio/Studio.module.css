@@ -227,74 +227,51 @@
 @media (min-width: 403px) and (max-width: 744px) {
 
   .studioSection {
+    position: relative;
     display: flex;
-    height: auto;
-    min-height: 0;
+    height: 845px;
+    min-height: 845px;
     flex-direction: column;
     overflow: hidden;
-    padding-top: clamp(
-      95.789474px,
-      calc(12.96496373vw + 43.54067px),
-      140px
-    );
+    padding-top: 120px;
     background: #000;
   }
 
   .studioContent {
-    --studio-tablet-logo-width: clamp(
-      130px,
-      calc(17.59530792vw + 59.090909px),
-      190px
-    );
-    --studio-tablet-gap: clamp(
-      21.894737px,
-      calc(2.96342028vw + 9.952153px),
-      32px
-    );
     position: relative;
+    z-index: 1;
     order: 1;
-    display: grid;
-    width: clamp(
-      398.210526px,
-      calc(53.89720636vw + 181.004785px),
-      582px
-    );
+    display: flex;
+    width: 326px;
     height: auto;
     min-height: 0;
-    grid-template-columns: var(--studio-tablet-logo-width) minmax(0, 1fr);
-    align-items: start;
-    gap: var(--studio-tablet-gap);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     padding: 0;
-    margin: 0 auto clamp(
-      95.789474px,
-      calc(12.96496373vw + 43.54067px),
-      140px
-    );
+    margin: 0 auto;
   }
 
   .studioLogo {
-    width: 100%;
-    height: auto;
-    justify-self: start;
+    width: 300px;
+    height: 194px;
+    flex: 0 0 auto;
+    justify-self: auto;
   }
 
   .studioCopy {
-    width: 100%;
-    margin-top: 0;
+    width: 300px;
+    margin: 0;
   }
 
   .studioCopy p {
-    font-size: clamp(
-      10.263158px,
-      calc(1.38910326vw + 4.665072px),
-      15px
-    );
+    font-size: 15px;
   }
 
   .studioBackdrop {
-    position: relative;
-    order: 2;
-    top: auto;
+    position: absolute;
+    z-index: 0;
+    top: 175px;
     right: auto;
     bottom: auto;
     left: 50%;
@@ -321,7 +298,7 @@
     height: auto;
     min-height: 0;
     overflow: visible;
-    padding: 60px 0 45px;
+    padding: 120px 0 45px;
     background: #000;
   }
 
@@ -397,7 +374,11 @@
     height: 403px;
     min-height: 403px;
     padding: 0;
-    margin: 160px 60px 0 1013px;
+    margin: 160px 0 0 clamp(
+      665.5px,
+      calc(50vw + 293px),
+      1013px
+    );
   }
 
   .studioLogo {
