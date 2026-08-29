@@ -2,7 +2,7 @@ export type ExternalLink = string | null;
 
 const temporaryLink = "about:blank";
 const steamLink = "https://store.steampowered.com/app/3224600/Am_I_Nima/";
-const discordLink = "https://discord.gg/6Pf5E3GEG";
+const discordLink = "https://discord.gg/n4Uv9BQZZ";
 const twitterLink = "https://x.com/HO_games_studio";
 const blueskyLink = "https://bsky.app/profile/ho-games-studio.bsky.social";
 const instagramLink = "https://www.instagram.com/ho.games/";
@@ -14,7 +14,7 @@ export const siteContent = {
   title: "Am I Nima?",
   description:
     "Am I Nima puts you in control of Nima's fractured mind. Explore a dark narrative puzzle game from Ho Games Studio.",
-  videoSrc: "/videos/home-video.mp4",
+  videoSrc: "/videos/am-i-nima-sgf-web.mp4",
   videoUrl: null as ExternalLink,
   steam: {
     demoUrl: steamLink,
@@ -44,16 +44,28 @@ export const siteContent = {
   ],
   gallery: [
     {
-      src: "/assets/gallery/nima-dialogue-gameplay.png",
-      alt: "Nima builds a dialogue response from connected words while speaking with her mother.",
+      src: "/assets/gallery/1.jpg",
+      alt: "Am I Nima? gameplay screenshot 1.",
     },
     {
-      src: "/assets/images/nima-main-menu.png",
-      alt: "The Am I Nima? main menu over a dark red silhouette of Nima.",
+      src: "/assets/gallery/2.jpg",
+      alt: "Am I Nima? gameplay screenshot 2.",
     },
     {
-      src: "/assets/images/nima-key-art-background.png",
-      alt: "A dark illustrated bathroom scene from Am I Nima?.",
+      src: "/assets/gallery/3.jpg",
+      alt: "Am I Nima? gameplay screenshot 3.",
+    },
+    {
+      src: "/assets/gallery/4.jpg",
+      alt: "Am I Nima? gameplay screenshot 4.",
+    },
+    {
+      src: "/assets/gallery/5.jpg",
+      alt: "Am I Nima? gameplay screenshot 5.",
+    },
+    {
+      src: "/assets/gallery/6.jpg",
+      alt: "Am I Nima? gameplay screenshot 6.",
     },
   ],
 } as const;

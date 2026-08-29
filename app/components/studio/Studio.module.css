@@ -9,19 +9,36 @@
 
 .studioBackdrop {
   position: absolute;
-  inset: 0;
-  opacity: .8;
+  z-index: 0;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  width: 1436px;
+  height: 623px;
 }
 
 .studioBackdropImage {
-  object-fit: cover;
-  object-position: center 51%;
+  display: block;
+  width: 1436px;
+  max-width: none;
+  height: 623px;
 }
 
-.studioBackdropShade {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(rgba(0, 0, 0, .52), rgba(0, 0, 0, .58));
+.studioNarrowBackdropImage,
+.studioMobileBackdropImage {
+  display: none;
+}
+
+.studioNarrowBackdropImage {
+  width: 1087px;
+  max-width: none;
+  height: 670px;
+}
+
+.studioMobileBackdropImage {
+  object-fit: cover;
+  object-position: center 51%;
 }
 
 .studioContent {
@@ -89,14 +106,10 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 744px) {
 
   .studioSection {
     min-height: 12.2rem;
-  }
-
-  .studioBackdrop {
-    opacity: .55;
   }
 
   .studioContent {
@@ -121,54 +134,10 @@
   }
 }
 
-@media (min-width: 1024px) {
-
-  .studioContent {
-    grid-template-columns: 349px 361px;
-  }
-
-}
-
-@media (min-width: 600px) and (max-width: 1023px) {
-
-  .studioSection {
-    min-height: 913px;
-  }
-
-  .studioBackdrop {
-    height: 913px;
-  }
-
-  .studioContent {
-    width: 582px;
-    grid-template-columns: 189px 361px;
-    align-items: start;
-    gap: 37px;
-    min-height: 913px;
-    padding: 32px 0 0;
-    margin-left: 81px;
-    margin-right: 0;
-  }
-
-  .studioLogo {
-    width: 189px;
-    justify-self: start;
-  }
-
-  .studioCopy {
-    width: 361px;
-    margin-top: 0;
-  }
-}
-
 @media (max-width: 599px) {
 
   .studioSection {
     min-height: 832px;
-  }
-
-  .studioBackdrop {
-    opacity: .55;
   }
 
   .studioContent {
@@ -197,52 +166,12 @@
   }
 
 }
-@media (min-width: 768px) and (max-width: 1023px) {
-
-  .studioSection,
-.studioBackdrop {
-    min-height: calc(53.125vw + 505px);
-    height: calc(53.125vw + 505px);
-  }
-
-  .studioContent {
-    width: calc(66.796875vw + 69px);
-    grid-template-columns: calc(62.5vw - 291px) 361px;
-    gap: calc(2.34375vw + 19px);
-    min-height: calc(53.125vw + 505px);
-    padding-top: calc(3.515625vw + 5px);
-    margin-left: calc(53.515625vw - 330px);
-  }
-
-  .studioLogo {
-    width: calc(62.5vw - 291px);
-  }
-}
 .studioSection,
-.studioBackdrop,
 .studioContent {
   height: 1021px;
   min-height: 1021px;
 }
-
-.studioBackdrop {
-  top: 0;
-  bottom: auto;
-}
-@media (min-width: 1024px) {
-
-  .studioSection,
-.studioContent {
-    height: 1049px;
-    min-height: 1049px;
-  }
-
-  .studioBackdrop {
-    min-height: 0;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 600px) and (max-width: 744px) {
 
   .studioSection,
 .studioContent {
@@ -250,26 +179,6 @@
     min-height: 913px;
   }
 
-  .studioBackdrop {
-    top: 0;
-    height: 913px;
-    min-height: 0;
-  }
-}
-
-@media (min-width: 600px) and (max-width: 767px) {
-
-  .studioSection,
-.studioContent {
-    height: 913px;
-    min-height: 913px;
-  }
-
-  .studioBackdrop {
-    top: 0;
-    height: 913px;
-    min-height: 0;
-  }
 }
 
 @media (max-width: 599px) {
@@ -280,37 +189,12 @@
     min-height: 832px;
   }
 
-  .studioBackdrop {
-    top: 0;
-    height: 832px;
-    min-height: 0;
-  }
 }
-@media (min-width: 1024px) {
+@media (min-width: 745px) {
   .studioSection {
     height: 687px;
     min-height: 687px;
     background: #000;
-  }
-
-  .studioBackdrop {
-    top: 0;
-    right: auto;
-    bottom: auto;
-    left: 0;
-    width: 1163px;
-    height: 687px;
-    opacity: .8;
-    transform: none;
-  }
-
-  .studioBackdropImage {
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .studioBackdropShade {
-    background: linear-gradient(90deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .58));
   }
 
   .studioContent {
@@ -348,32 +232,44 @@
     min-height: 0;
     flex-direction: column;
     overflow: hidden;
-    padding-top: 140px;
+    padding-top: clamp(
+      95.789474px,
+      calc(12.96496373vw + 43.54067px),
+      140px
+    );
     background: #000;
   }
 
   .studioContent {
     --studio-tablet-logo-width: clamp(
       130px,
-      calc(17.54386vw + 59.47368px),
+      calc(17.59530792vw + 59.090909px),
       190px
     );
     --studio-tablet-gap: clamp(
-      19px,
-      calc(3.80117vw + 3.7193px),
+      21.894737px,
+      calc(2.96342028vw + 9.952153px),
       32px
     );
     position: relative;
     order: 1;
     display: grid;
-    width: clamp(326px, calc(74.8538vw + 25.08772px), 582px);
+    width: clamp(
+      398.210526px,
+      calc(53.89720636vw + 181.004785px),
+      582px
+    );
     height: auto;
     min-height: 0;
     grid-template-columns: var(--studio-tablet-logo-width) minmax(0, 1fr);
     align-items: start;
     gap: var(--studio-tablet-gap);
     padding: 0;
-    margin: 0 auto 140px;
+    margin: 0 auto clamp(
+      95.789474px,
+      calc(12.96496373vw + 43.54067px),
+      140px
+    );
   }
 
   .studioLogo {
@@ -387,15 +283,34 @@
     margin-top: 0;
   }
 
+  .studioCopy p {
+    font-size: clamp(
+      10.263158px,
+      calc(1.38910326vw + 4.665072px),
+      15px
+    );
+  }
+
   .studioBackdrop {
     position: relative;
     order: 2;
-    inset: auto;
-    width: 100%;
-    height: clamp(832px, calc(23.68421vw + 736.78947px), 913px);
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    width: 1087px;
+    height: 670px;
     min-height: 0;
     margin: 0;
-    transform: none;
+    transform: translateX(-50%);
+  }
+
+  .studioBackdropImage {
+    display: none;
+  }
+
+  .studioNarrowBackdropImage {
+    display: block;
   }
 }
 @media (max-width: 402px) {
@@ -403,16 +318,17 @@
   .studioSection {
     position: static;
     width: 100%;
-    height: 321px;
-    min-height: 321px;
+    height: auto;
+    min-height: 0;
     overflow: visible;
+    padding: 60px 0 45px;
     background: #000;
   }
 
   .studioBackdrop {
     position: absolute;
     z-index: 0;
-    top: 60px;
+    top: 175px;
     right: 0;
     bottom: auto;
     left: 0;
@@ -423,6 +339,15 @@
   }
 
   .studioBackdropImage {
+    display: none;
+  }
+
+  .studioNarrowBackdropImage {
+    display: none;
+  }
+
+  .studioMobileBackdropImage {
+    display: block;
     object-fit: cover;
     object-position: center top;
   }
@@ -430,25 +355,26 @@
   .studioContent {
     position: relative;
     z-index: 1;
-    display: grid;
+    display: flex;
     width: 326px;
-    height: 240px;
+    height: auto;
     min-height: 0;
-    grid-template-columns: 131px 176px;
-    align-items: start;
-    gap: 19px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     padding: 0;
-    margin: 60px auto 0;
+    margin: 0 auto;
   }
 
   .studioLogo {
-    width: 131px;
-    height: 84px;
-    justify-self: start;
+    width: 300px;
+    height: 194px;
+    flex: 0 0 auto;
+    justify-self: auto;
   }
 
   .studioCopy {
-    width: 176px;
+    width: 300px;
     margin: 0;
   }
 
@@ -457,11 +383,13 @@
     line-height: 1.6;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 745px) {
   .studioSection {
-    width: min(1317px, calc(100% - 48px));
-    margin-right: auto;
-    margin-left: auto;
+    left: 50%;
+    width: 1436px;
+    margin-right: 0;
+    margin-left: 0;
+    transform: translateX(-50%);
   }
 
   .studioContent {
@@ -469,9 +397,7 @@
     height: 403px;
     min-height: 403px;
     padding: 0;
-    margin-top: 160px;
-    margin-right: 0;
-    margin-left: auto;
+    margin: 160px 60px 0 1013px;
   }
 
   .studioLogo {

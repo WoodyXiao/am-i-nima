@@ -6,14 +6,30 @@ export function StudioSection() {
   return (
     <section className={styles.studioSection} aria-labelledby="studio-title">
       <div className={styles.studioBackdrop} aria-hidden="true">
-          <Image
-            src={assetPath("/assets/images/nima-main-menu.png")}
-            alt=""
-            fill
-            sizes="100vw"
-            className={styles.studioBackdropImage}
-          />
-        </div>
+        <Image
+          src={assetPath("/assets/images/About Background Wide Crop.png")}
+          alt=""
+          width={1436}
+          height={623}
+          sizes="1436px"
+          className={styles.studioBackdropImage}
+        />
+        <Image
+          src={assetPath("/assets/images/About Background Narrow Crop.png")}
+          alt=""
+          width={1087}
+          height={670}
+          sizes="1087px"
+          className={styles.studioNarrowBackdropImage}
+        />
+        <Image
+          src={assetPath("/assets/images/About Background Narrow Crop.png")}
+          alt=""
+          fill
+          sizes="100vw"
+          className={styles.studioMobileBackdropImage}
+        />
+      </div>
       <div className={styles.studioContent}>
         <Image
           src={assetPath("/assets/logos/ho-games.png")}

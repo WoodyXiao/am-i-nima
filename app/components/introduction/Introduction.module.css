@@ -714,7 +714,12 @@
 
   .introductionCopy {
     padding-top: 102px;
+    pointer-events: none;
     transform: translateY(-180px);
+  }
+
+  .steamButton {
+    pointer-events: auto;
   }
 
   .releaseDate {

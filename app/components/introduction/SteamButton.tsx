@@ -13,7 +13,7 @@ export function SteamButton({ label, href, variant }: SteamButtonProps) {
     <>
       <span>{label}</span>
       <Image
-        src={assetPath("/assets/icons/steam.png")}
+        src={assetPath("/assets/icons/steam.svg")}
         alt=""
         width={31}
         height={31}
