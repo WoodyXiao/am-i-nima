@@ -375,9 +375,9 @@
     min-height: 403px;
     padding: 0;
     margin: 160px 0 0 clamp(
-      665.5px,
-      calc(50vw + 293px),
-      1013px
+      727.5px,
+      calc(50vw + 355px),
+      1013.5px
     );
   }
 

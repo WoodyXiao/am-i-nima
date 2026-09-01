@@ -1,6 +1,6 @@
 export type ExternalLink = string | null;
 
-const temporaryLink = "about:blank";
+const pressKitLink = "https://drive.google.com/drive/u/0/folders/1DrPc7u_2DXOlQRoasCJFToPlZrxN_SmJ";
 const steamLink = "https://store.steampowered.com/app/3224600/Am_I_Nima/";
 const discordLink = "https://discord.gg/n4Uv9BQZZ";
 const twitterLink = "https://x.com/HO_games_studio";
@@ -30,7 +30,7 @@ export const siteContent = {
   },
   contact: {
     email: "ho.games.studio@gmail.com",
-    pressKitUrl: temporaryLink,
+    pressKitUrl: pressKitLink,
   },
   socials: [
     { label: "Steam", url: steamLink, icon: "/assets/icons/steam.svg", iconWidth: 79, iconHeight: 80 },
