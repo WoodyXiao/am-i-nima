@@ -6,7 +6,7 @@ const nextConfig = {
   outputFileTracingRoot: process.cwd(),
   trailingSlash: true,
   basePath,
-  assetPrefix: basePath ? `${basePath}/` : undefined,
+  assetPrefix: basePath || undefined,
   images: {
     unoptimized: true,
   },
